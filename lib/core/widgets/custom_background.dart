@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBackground extends StatelessWidget {
   const CustomBackground({
     super.key,
     required this.child,
+    this.imagePath,
+    this.horizontalPadding,
+    this.verticalPadding,
   });
 
   final Widget child;
+  final String? imagePath;
+  final double? horizontalPadding;
+  final double? verticalPadding;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        height: MediaQuery.sizeOf(context).height,
+        padding: EdgeInsets.symmetric(
+          horizontal: horizontalPadding?.w ?? 0,
+          vertical: verticalPadding?.h ?? 0,
+        ),
         width: MediaQuery.sizeOf(context).width,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              'assets/images/welcome.png',
+              imagePath ?? 'assets/images/welcome.png',
             ),
             fit: BoxFit.fill,
           ),
