@@ -1,6 +1,6 @@
 
-import 'package:edugate_applocation/core/theming/colors.dart';
-import 'package:edugate_applocation/core/theming/styles.dart';
+import '../theming/colors.dart';
+import '../theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

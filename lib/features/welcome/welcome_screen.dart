@@ -1,7 +1,8 @@
-import 'package:edugate_applocation/core/theming/styles.dart';
-import 'package:edugate_applocation/core/widgets/custom_background.dart';
-import 'package:edugate_applocation/features/welcome/widgets/register_and_login_buttons.dart';
-import 'package:edugate_applocation/features/welcome/widgets/welcome_to_edugate_text.dart';
+import '../../core/helpers/spacing.dart';
+import '../../core/theming/styles.dart';
+import '../../core/widgets/custom_background.dart';
+import 'widgets/register_and_login_buttons.dart';
+import 'widgets/welcome_to_edugate_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,28 +18,20 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 145.h,
-            ),
+            verticalSpacing(145),
             const WelcomeToEdugateText(),
-            SizedBox(
-              height: 10.h,
-            ),
+            verticalSpacing(10),
             Text(
               'Effortless attendance tracking.\nScan, authenticate with fingerprint and Face ID',
               textAlign: TextAlign.center,
-              style: TextStyles.font14GrayRegular,
+              style: TextStyles.font14GreyRegular,
             ),
-            SizedBox(
-              height: 40.h,
-            ),
+            verticalSpacing(40),
             SvgPicture.asset(
               'assets/svgs/welcome.svg',
               height: 250.h,
             ),
-            SizedBox(
-              height: 50.h,
-            ),
+            verticalSpacing(50),
             const RegisterAndLoginButtons(),
           ],
         ),

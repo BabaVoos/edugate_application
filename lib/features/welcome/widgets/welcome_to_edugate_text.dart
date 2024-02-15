@@ -1,6 +1,6 @@
-import 'package:edugate_applocation/core/theming/colors.dart';
-import 'package:edugate_applocation/core/theming/styles.dart';
-import 'package:edugate_applocation/core/widgets/my_rich_text.dart';
+import '../../../core/theming/colors.dart';
+import '../../../core/theming/styles.dart';
+import '../../../core/widgets/my_rich_text.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeToEdugateText extends StatelessWidget {

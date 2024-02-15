@@ -1,5 +1,5 @@
-import 'package:edugate_applocation/core/theming/colors.dart';
-import 'package:edugate_applocation/core/theming/font_weight_helper.dart';
+import 'colors.dart';
+import 'font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,9 +29,21 @@ class TextStyles {
     color: ColorsManager.whiteColor,
   );
 
-  static TextStyle font14GrayRegular = GoogleFonts.poppins(
+  static TextStyle font28DarkBlueMedium = GoogleFonts.poppins(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsManager.darkBlueColor,
+  );
+
+  static TextStyle font14GreyRegular = GoogleFonts.poppins(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
-    color: ColorsManager.grayColor,
+    color: ColorsManager.greyColor,
+  );
+
+  static TextStyle font14BlackMedium = GoogleFonts.poppins(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.black,
   );
 }

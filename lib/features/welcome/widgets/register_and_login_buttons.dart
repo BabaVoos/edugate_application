@@ -1,7 +1,7 @@
-import 'package:edugate_applocation/core/helpers/extinsions.dart';
-import 'package:edugate_applocation/core/routing/router.dart';
-import 'package:edugate_applocation/core/theming/colors.dart';
-import 'package:edugate_applocation/core/widgets/app_button.dart';
+import '../../../core/helpers/extinsions.dart';
+import '../../../core/routing/router.dart';
+import '../../../core/theming/colors.dart';
+import '../../../core/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
