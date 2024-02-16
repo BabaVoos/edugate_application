@@ -39,8 +39,8 @@ dependencies:
   retrofit_generator: ^8.0.4
   # A Flutter package to use fonts from google fonts
   google_fonts: ^6.1.0
-  
-  
+  # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

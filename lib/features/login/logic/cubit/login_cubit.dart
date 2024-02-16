@@ -1,3 +1,4 @@
+import 'package:edugate_applocation/core/networking/cache_helper.dart';
 import 'package:edugate_applocation/features/login/data/models/login_request_body.dart';
 import 'package:edugate_applocation/features/login/data/repos/login_repo.dart';
 import 'package:edugate_applocation/features/login/logic/cubit/login_state.dart';
@@ -21,9 +22,19 @@ class LoginCubit extends Cubit<LoginState> {
     );
 
     response.when(
-      success: (loginResponse) => emit(
-        LoginState.success(loginResponse),
-      ),
+      success: (loginResponse) async {
+        CacheHelper.saveData(key: 'USER_DATA', value: [
+          loginResponse.userName ?? 'UserName Not Found',
+          loginResponse.email ?? 'Email Not Found',
+          loginResponse.phoneNumber ?? 'Phone Number Not Found',
+          loginResponse.token ?? 'Token Not Found',
+          loginResponse.displayName ?? 'Display Name Not Found',
+        ]).then((value) {
+          emit(
+            LoginState.success(loginResponse),
+          );
+        });
+      },
       failure: (error) => emit(
         LoginState.error(message: error.apiErrorModel.errorMessage ?? ''),
       ),
