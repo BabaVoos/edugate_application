@@ -1,3 +1,6 @@
+import 'package:edugate_applocation/features/login/logic/cubit/login_cubit.dart';
+import 'package:edugate_applocation/features/login/ui/widgets/login_bloc_listerner.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/colors.dart';
 import '../../../core/theming/styles.dart';
@@ -35,15 +38,24 @@ class LoginScreen extends StatelessWidget {
               verticalSpacing(20),
               AppTitleAndButton(
                 backgroundColor: ColorsManager.orangeColor,
-                onTap: () {},
+                onTap: () {
+                  validateThenDoLogin(context);
+                },
                 buttonTitle: 'Login',
               ),
               verticalSpacing(40),
               const NewbieText(),
+              const LoginBlocListener(),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void validateThenDoLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().emitLoginStates();
+    }
   }
 }
