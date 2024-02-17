@@ -1,3 +1,6 @@
+import 'package:edugate_applocation/core/helpers/cached_data.dart';
+import 'package:edugate_applocation/core/networking/cache_helper.dart';
+
 import 'core/routing/app_router.dart';
 import 'core/routing/router.dart';
 import 'core/theming/colors.dart';
@@ -17,8 +20,6 @@ class EduGateApp extends StatelessWidget {
       designSize: const Size(393, 852),
       minTextAdapt: true,
       child: MaterialApp(
-        // locale: DevicePreview.locale(context),
-        // builder: DevicePreview.appBuilder,
         title: 'EduGate App',
         theme: ThemeData(
           primaryColor: ColorsManager.blueColor,
