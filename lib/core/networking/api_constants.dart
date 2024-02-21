@@ -1,6 +1,7 @@
 class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
   static const String login = 'account/login';
+  static const String register = 'account/register';
 }
 
 class ApiErrors {
