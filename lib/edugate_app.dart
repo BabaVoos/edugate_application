@@ -1,6 +1,3 @@
-import 'package:edugate_applocation/core/helpers/cached_data.dart';
-import 'package:edugate_applocation/core/networking/cache_helper.dart';
-
 import 'core/routing/app_router.dart';
 import 'core/routing/router.dart';
 import 'core/theming/colors.dart';
