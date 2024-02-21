@@ -35,7 +35,6 @@ class LoginBlocListener extends StatelessWidget {
             context.pushReplacementNamed(Routes.setupFaceIdScreen);
           },
           error: (error) {
-            if (error == 'This UserName is already in exist!!')
             setupErroState(context,
                 'Invalid email or password. Please check your credentials and try again.');
           },

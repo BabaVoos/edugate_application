@@ -2,8 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:edugate_applocation/core/networking/api_constants.dart';
 import 'package:edugate_applocation/features/login/data/models/login_request_body.dart';
 import 'package:edugate_applocation/features/login/data/models/login_response.dart';
-import 'package:edugate_applocation/features/register/data/models/register_request_body.dart';
-import 'package:edugate_applocation/features/register/data/models/register_response.dart';
 import 'package:retrofit/http.dart';
 part 'api_service.g.dart';
 
@@ -14,10 +12,5 @@ abstract class ApiService {
   @POST(ApiConstants.login)
   Future<LoginResponse> login(
     @Body() LoginRequestBody loginRequestBody,
-  );
-
-  @POST(ApiConstants.register)
-  Future<RegisterResponse> register(
-    @Body() RegisterRequestBody registerRequestBody,
   );
 }

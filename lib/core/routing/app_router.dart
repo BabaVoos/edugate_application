@@ -9,8 +9,6 @@ import 'package:edugate_applocation/features/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/register/logic/cubit/register_cubit.dart';
-
 class AppRouter {
   Route generateRoute(RouteSettings routeSettings) {
     // this arguments to be passed in any screen like this ( arguents as ClassName )
@@ -29,10 +27,7 @@ class AppRouter {
         );
       case Routes.registerScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<RegisterCubit>(),
-            child: const RegisterScreen(),
-          ),
+          builder: (_) => const RegisterScreen(),
         );
       case Routes.setupFaceIdScreen:
         return MaterialPageRoute(
