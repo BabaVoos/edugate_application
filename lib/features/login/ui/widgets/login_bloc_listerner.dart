@@ -1,5 +1,4 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
-import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
 import 'package:edugate_applocation/features/login/logic/cubit/login_cubit.dart';
@@ -32,7 +31,6 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (loginResponse) {
             context.pop();
-            context.pushReplacementNamed(Routes.setupFaceIdScreen);
           },
           error: (error) {
             setupErroState(context,
