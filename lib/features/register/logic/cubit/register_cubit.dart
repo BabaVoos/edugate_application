@@ -2,7 +2,6 @@ import 'package:edugate_applocation/features/register/data/repos/register_repo.d
 import 'package:edugate_applocation/features/register/logic/cubit/register_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../data/models/register_request_body.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {

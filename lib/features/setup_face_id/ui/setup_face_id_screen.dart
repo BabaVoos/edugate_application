@@ -4,9 +4,13 @@ import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
 import 'package:edugate_applocation/core/widgets/app_title_and_button.dart';
 import 'package:edugate_applocation/core/widgets/custom_background.dart';
+import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_cubit.dart';
+import 'package:edugate_applocation/features/setup_face_id/ui/widgets/setup_face_id_bloc_listener.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:image_picker/image_picker.dart';
 
 class SetupFaceIdScreen extends StatefulWidget {
   const SetupFaceIdScreen({
@@ -25,13 +29,12 @@ class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
     super.initState();
   }
 
+  XFile? image;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
       body: CustomBackground(
-        horizontalPadding: 24,
-        imagePath: 'assets/images/background.png',
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -55,12 +58,23 @@ class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
               AppTitleAndButton(
                 buttonTitle: 'Scan my face',
                 backgroundColor: ColorsManager.orangeColor,
-                onTap: () {},
+                onTap: () async {
+                  pickImageThenEmit(image);
+                },
               ),
+              const SetupFaceIdBlocListener(),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Future<void> pickImageThenEmit(XFile? image) async {
+    image = await ImagePicker().pickImage(source: ImageSource.camera);
+    setState(() {});
+    if (image != null) {
+      context.read<SetupFaceIdCubit>().emitSetupFaceIdStates(image);
+    }
   }
 }

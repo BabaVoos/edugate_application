@@ -41,6 +41,8 @@ dependencies:
   google_fonts: ^6.1.0
   # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
   shared_preferences: ^2.2.2
+  # For Picking images from gallery or camera
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable
 import 'package:edugate_applocation/core/di/dependency_injection.dart';
 import 'package:edugate_applocation/core/routing/router.dart';
+import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_cubit.dart';
 import 'package:edugate_applocation/features/setup_face_id/ui/setup_face_id_screen.dart';
 import 'package:edugate_applocation/features/login/logic/cubit/login_cubit.dart';
 import 'package:edugate_applocation/features/login/ui/login_screen.dart';
@@ -36,7 +37,10 @@ class AppRouter {
         );
       case Routes.setupFaceIdScreen:
         return MaterialPageRoute(
-          builder: (_) => const SetupFaceIdScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<SetupFaceIdCubit>(),
+            child: const SetupFaceIdScreen(),
+          ),
         );
       default:
         return MaterialPageRoute(

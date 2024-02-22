@@ -1,25 +1,26 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
-import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
-import 'package:edugate_applocation/features/login/logic/cubit/login_cubit.dart';
-import 'package:edugate_applocation/features/login/logic/cubit/login_state.dart';
+import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_cubit.dart';
+import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginBlocListener extends StatelessWidget {
-  const LoginBlocListener({super.key});
+class SetupFaceIdBlocListener extends StatelessWidget {
+  const SetupFaceIdBlocListener({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<LoginCubit, LoginState>(
+    return BlocListener<SetupFaceIdCubit, SetupFaceIdState>(
       listenWhen: (previous, current) =>
-          current is Loading || current is Success || current is Error,
+          current is SetupFaceIdLoading ||
+          current is SetupFaceIdSuccess ||
+          current is SetupFaceIdError,
       listener: (context, state) {
         // either loading state or success state or error state will be handled or null
         state.whenOrNull(
-          loading: () {
+          setupFaceIdLoading: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -30,13 +31,15 @@ class LoginBlocListener extends StatelessWidget {
               ),
             );
           },
-          success: (loginResponse) {
-            context.pop();
-            context.pushReplacementNamed(Routes.setupFaceIdScreen);
+          setupFaceIdSuccess: (loginResponse) {
+            setupErroState(context, loginResponse.message);
+            // context.pushReplacementNamed(Routes.setupFaceIdScreen);
           },
-          error: (error) {
-            setupErroState(context,
-                'Invalid email or password. Please check your credentials and try again.');
+          setupFaceIError: (error) {
+            setupErroState(
+              context,
+              error,
+            );
           },
         );
       },
