@@ -21,14 +21,14 @@ class CustomBackground extends StatelessWidget {
       child: Container(
         height: MediaQuery.sizeOf(context).height,
         padding: EdgeInsets.symmetric(
-          horizontal: horizontalPadding?.w ?? 0,
+          horizontal: horizontalPadding?.w ?? 24.sp,
           vertical: verticalPadding?.h ?? 0,
         ),
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              imagePath ?? 'assets/images/welcome.png',
+              imagePath ?? 'assets/images/background.png',
             ),
             fit: BoxFit.fill,
           ),

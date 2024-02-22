@@ -2,6 +2,7 @@ class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
   static const String login = 'account/login';
   static const String register = 'account/register';
+  static const String uploadImage = 'UploadImage/uploadfile';
 }
 
 class ApiErrors {
@@ -20,4 +21,5 @@ class ApiErrors {
   static const String loadingMessage = "loading_message";
   static const String retryAgainMessage = "retry_again_message";
   static const String ok = "Ok";
+  static const String badResponse = "something went wrong";
 }

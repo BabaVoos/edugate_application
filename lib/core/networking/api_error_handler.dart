@@ -19,7 +19,7 @@ enum DataSource {
   SEND_TIMEOUT,
   CACHE_ERROR,
   NO_INTERNET_CONNECTION,
-  // API_LOGIC_ERROR,
+  BAD_RESPONSE,
   DEFAULT
 }
 
@@ -27,6 +27,7 @@ class ResponseCode {
   static const int SUCCESS = 200; // success with data
   static const int NO_CONTENT = 201; // success with no data (no content)
   static const int BAD_REQUEST = 400; // failure, API rejected request
+  static const int BAD_RESPONSE = 302;
   static const int UNAUTORISED = 401; // failure, user is not authorised
   static const int FORBIDDEN = 403; //  failure, API rejected request
   static const int INTERNAL_SERVER_ERROR = 500; // failure, crash in server side
@@ -56,6 +57,7 @@ class ResponseMessage {
       ApiErrors.internalServerError; // failure, crash in server side
   static const String NOT_FOUND =
       ApiErrors.notFoundError; // failure, crash in server side
+  static const String BAD_RESPONSE = ApiErrors.badResponse;
 
   // local status code
   static String CONNECT_TIMEOUT = ApiErrors.timeoutError;
@@ -72,21 +74,24 @@ extension DataSourceExtension on DataSource {
     switch (this) {
       case DataSource.NO_CONTENT:
         return const ApiErrorModel(
-            statusCode: ResponseCode.NO_CONTENT, errorMessage: ResponseMessage.NO_CONTENT);
+            statusCode: ResponseCode.NO_CONTENT,
+            errorMessage: ResponseMessage.NO_CONTENT);
       case DataSource.BAD_REQUEST:
         return const ApiErrorModel(
             statusCode: ResponseCode.BAD_REQUEST,
             errorMessage: ResponseMessage.BAD_REQUEST);
       case DataSource.FORBIDDEN:
         return const ApiErrorModel(
-            statusCode: ResponseCode.FORBIDDEN, errorMessage: ResponseMessage.FORBIDDEN);
+            statusCode: ResponseCode.FORBIDDEN,
+            errorMessage: ResponseMessage.FORBIDDEN);
       case DataSource.UNAUTORISED:
         return const ApiErrorModel(
             statusCode: ResponseCode.UNAUTORISED,
             errorMessage: ResponseMessage.UNAUTORISED);
       case DataSource.NOT_FOUND:
         return const ApiErrorModel(
-            statusCode: ResponseCode.NOT_FOUND, errorMessage: ResponseMessage.NOT_FOUND);
+            statusCode: ResponseCode.NOT_FOUND,
+            errorMessage: ResponseMessage.NOT_FOUND);
       case DataSource.INTERNAL_SERVER_ERROR:
         return const ApiErrorModel(
             statusCode: ResponseCode.INTERNAL_SERVER_ERROR,
@@ -97,7 +102,8 @@ extension DataSourceExtension on DataSource {
             errorMessage: ResponseMessage.CONNECT_TIMEOUT);
       case DataSource.CANCEL:
         return ApiErrorModel(
-            statusCode: ResponseCode.CANCEL, errorMessage: ResponseMessage.CANCEL);
+            statusCode: ResponseCode.CANCEL,
+            errorMessage: ResponseMessage.CANCEL);
       case DataSource.RECIEVE_TIMEOUT:
         return ApiErrorModel(
             statusCode: ResponseCode.RECIEVE_TIMEOUT,
@@ -116,7 +122,12 @@ extension DataSourceExtension on DataSource {
             errorMessage: ResponseMessage.NO_INTERNET_CONNECTION);
       case DataSource.DEFAULT:
         return ApiErrorModel(
-            statusCode: ResponseCode.DEFAULT, errorMessage: ResponseMessage.DEFAULT);
+            statusCode: ResponseCode.DEFAULT,
+            errorMessage: ResponseMessage.DEFAULT);
+      case DataSource.BAD_RESPONSE:
+        return const ApiErrorModel(
+            statusCode: ResponseCode.BAD_RESPONSE,
+            errorMessage: ResponseMessage.BAD_RESPONSE);
     }
   }
 }
