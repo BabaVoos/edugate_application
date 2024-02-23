@@ -10,6 +10,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupGetIt();
   await CacheHelper.init();
+  // To fix textsbeing hiddenbug in flutter_screenutil in release mode
   await ScreenUtil.ensureScreenSize();
   runApp(
     EduGateApp(

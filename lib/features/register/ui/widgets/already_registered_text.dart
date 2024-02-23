@@ -1,4 +1,5 @@
-
+import 'package:edugate_applocation/core/helpers/extinsions.dart';
+import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,6 +22,9 @@ class AlreadyRegisteredText extends StatelessWidget {
           TextStyles.font28DarkBlueMedium.copyWith(fontSize: 18.sp),
       firstTextStyle: TextStyles.font28DarkBlueMedium
           .copyWith(fontSize: 18.sp, color: ColorsManager.greyColor),
+      onTap: () {
+        context.pushReplacementNamed(Routes.loginScreen);
+      },
     );
   }
 }
