@@ -52,4 +52,28 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: Colors.black,
   );
+
+  static TextStyle font20BlueSemiBold = GoogleFonts.poppins(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.blueColor,
+  );
+
+  static TextStyle font24BlueSemiBold = GoogleFonts.poppins(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.blueColor,
+  );
+
+  static TextStyle font24BlueRegular = GoogleFonts.poppins(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.blueColor,
+  );
+
+  static TextStyle font30BlueSemiBold = GoogleFonts.poppins(
+    fontSize: 30.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.blueColor,
+  );
 }

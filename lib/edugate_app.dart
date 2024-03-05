@@ -1,3 +1,4 @@
+import 'package:edugate_applocation/core/helpers/cached_data.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/router.dart';
 import 'core/theming/colors.dart';
@@ -13,6 +14,7 @@ class EduGateApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CachedData.getAndSaveUserData();
     return ScreenUtilInit(
       designSize: const Size(393, 852),
       minTextAdapt: true,
@@ -23,7 +25,9 @@ class EduGateApp extends StatelessWidget {
           scaffoldBackgroundColor: ColorsManager.whiteColor,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.welcomeScreen,
+        initialRoute: CachedData.userName.toString() == ""
+            ? Routes.welcomeScreen
+            : Routes.edugateLayout,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );

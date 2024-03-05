@@ -477,6 +477,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  icon_broken:
+    dependency: "direct main"
+    description:
+      name: icon_broken
+      sha256: db2afe175dbb683cba9dcb89a0b81804ca5b973fbe5bf974002ffb98825d4c26
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   image:
     dependency: transitive
     description:
