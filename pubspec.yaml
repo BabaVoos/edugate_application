@@ -43,6 +43,8 @@ dependencies:
   shared_preferences: ^2.2.2
   # For Picking images from gallery or camera
   image_picker: ^1.0.7
+  # A package that helps you add more beautiful icons to your project
+  icon_broken: ^1.1.0
 
 dev_dependencies:
   flutter_test:
