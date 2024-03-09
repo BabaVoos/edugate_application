@@ -1,6 +1,8 @@
 import 'package:edugate_applocation/features/help/ui/help_screen.dart';
+import 'package:edugate_applocation/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:edugate_applocation/features/profile/ui/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'home_screen.dart';
 import 'widgets/application_app_bar.dart';
 import 'widgets/buildBottomNavigationAppBar.dart';
@@ -23,7 +25,10 @@ class _EdugateLayoutState extends State<EdugateLayout> {
 
   List<Widget> screens = [
     const HomeScreen(),
-    const ProfileScreen(),
+    BlocProvider(
+      create: (context) => ProfileCubit(),
+      child: const ProfileScreen(),
+    ),
     const HelpScreen(),
   ];
 

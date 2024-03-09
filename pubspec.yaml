@@ -45,6 +45,10 @@ dependencies:
   image_picker: ^1.0.7
   # A package that helps you add more beautiful icons to your project
   icon_broken: ^1.1.0
+  # Flutter library to load and cache network images
+  cached_network_image: ^3.3.1
+  #  Saves web files on the storages of the device
+  flutter_cache_manager: ^3.3.1
 
 dev_dependencies:
   flutter_test:

@@ -19,6 +19,8 @@ class AppTextFormField extends StatelessWidget {
   final Function(String?) validator;
   final Color? cursorColor;
   final TextInputType? keyboardType;
+  final Widget? prefixIcon;
+  final bool? enabled;
 
   const AppTextFormField({
     super.key,
@@ -36,6 +38,8 @@ class AppTextFormField extends StatelessWidget {
     required this.label,
     this.cursorColor,
     this.keyboardType,
+    this.prefixIcon,
+    this.enabled,
   });
 
   @override
@@ -44,7 +48,10 @@ class AppTextFormField extends StatelessWidget {
       keyboardType: keyboardType ?? TextInputType.text,
       cursorColor: cursorColor ?? ColorsManager.blueColor,
       controller: controller,
+      enabled: enabled ?? true,
       decoration: InputDecoration(
+        prefixIcon: prefixIcon,
+        prefixIconColor: ColorsManager.blueColor,
         labelText: label,
         labelStyle: TextStyles.font14BlackMedium.copyWith(color: Colors.grey),
         isDense: true,

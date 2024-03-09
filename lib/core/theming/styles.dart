@@ -59,6 +59,12 @@ class TextStyles {
     color: ColorsManager.blueColor,
   );
 
+  static TextStyle font22RedMedium = GoogleFonts.poppins(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsManager.redColor,
+  );
+
   static TextStyle font24BlueSemiBold = GoogleFonts.poppins(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.semiBold,
