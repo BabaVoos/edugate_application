@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/helpers/cached_data.dart';
+import '../../../../core/networking/cache_helper.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/my_rich_text.dart';
 
@@ -15,7 +15,8 @@ class GrettingsText extends StatelessWidget {
         firstText: 'Grettings,\n',
         firstTextStyle: TextStyles.font24BlueSemiBold,
         secondTextStyle: TextStyles.font24BlueRegular,
-        secondText: CachedData.displayName.toString(),
+        secondText:
+            '${CacheHelper.getData(key: 'displayName').split(' ')[0]} ${CacheHelper.getData(key: 'displayName').split(' ')[1]}',
       ),
     );
   }

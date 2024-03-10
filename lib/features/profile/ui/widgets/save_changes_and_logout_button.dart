@@ -7,7 +7,10 @@ import '../../../../core/theming/styles.dart';
 class SaveChangesAndLogoutButtons extends StatelessWidget {
   const SaveChangesAndLogoutButtons({
     super.key,
+    required this.saveChangesOnTap,
   });
+
+  final void Function()? saveChangesOnTap;  
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class SaveChangesAndLogoutButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextButton(
-          onPressed: () {},
+          onPressed: saveChangesOnTap,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

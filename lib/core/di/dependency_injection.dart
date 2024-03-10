@@ -3,6 +3,8 @@ import 'package:edugate_applocation/core/networking/api_service.dart';
 import 'package:edugate_applocation/core/networking/dio_factory.dart';
 import 'package:edugate_applocation/features/login/data/repos/login_repo.dart';
 import 'package:edugate_applocation/features/login/logic/cubit/login_cubit.dart';
+import 'package:edugate_applocation/features/profile/data/repos/update_profile_repo.dart';
+import 'package:edugate_applocation/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:edugate_applocation/features/register/data/repos/register_repo.dart';
 import 'package:get_it/get_it.dart';
 
@@ -28,4 +30,9 @@ Future<void> setupGetIt() async {
   // SetupFaceId
   getIt.registerLazySingleton<SetupFaceIdRepo>(() => SetupFaceIdRepo(getIt<ApiService>()));
   getIt.registerFactory<SetupFaceIdCubit>(() => SetupFaceIdCubit(getIt<SetupFaceIdRepo>()));
+
+  // Profile
+  getIt.registerFactory<UpdateProfileRepo>(() => UpdateProfileRepo(getIt<ApiService>()));
+  getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<UpdateProfileRepo>()));
+
 }

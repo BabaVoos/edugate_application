@@ -1,53 +1,43 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
-import 'package:edugate_applocation/core/networking/cache_helper.dart';
-import 'package:edugate_applocation/features/register/logic/cubit/register_cubit.dart';
-import 'package:edugate_applocation/features/register/logic/cubit/register_state.dart';
+import 'package:edugate_applocation/features/profile/ui/widgets/show_message_to_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/routing/router.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
+import '../../logic/cubit/profile_cubit.dart';
+import '../../logic/cubit/profile_state.dart';
 
-class RegisterBlocListener extends StatelessWidget {
-  const RegisterBlocListener({super.key});
+class ProfileBlocListener extends StatelessWidget {
+  const ProfileBlocListener({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<RegisterCubit, RegisterState>(
+    return BlocListener<ProfileCubit, ProfileState>(
       listenWhen: (previous, current) =>
-          current is RegisterLoading ||
-          current is RegisterSuccess ||
-          current is RegisterError,
+          current is UpdateProfileloading ||
+          current is UpdateProfileSuccess ||
+          current is UpdateProfileError,
       listener: (context, state) {
         // either loading state or success state or error state will be handled or null
         state.whenOrNull(
-          registerLoading: () {
+          updateProfileloading: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
                 child: CircularProgressIndicator(
-                  color: ColorsManager.orangeColor,
+                  color: ColorsManager.blueColor,
                   strokeWidth: 2,
                 ),
               ),
             );
           },
-          registerSuccess: (loginResponse) {
-            CacheHelper.saveData(key: 'userName', value: loginResponse.userName);
+          updateProfileSuccess: (updateProfileResponse) {
             context.pop();
-            context.pushReplacementNamed(Routes.setupFaceIdScreen);
+            showMessageToUser(context, message: 'Changes saved');
           },
-          registerError: (error) {
-            if (error == 'This Email is already in exist!!' ||
-                error == 'This UserName is already in exist!!') {
-              setupErroState(context, 'OOOps, Email already in use!');
-            } else {
-              setupErroState(
-                context,
-                error,
-              );
-            }
+          updateProfileError: (error) {
+            setupErroState(context, error);
           },
         );
       },

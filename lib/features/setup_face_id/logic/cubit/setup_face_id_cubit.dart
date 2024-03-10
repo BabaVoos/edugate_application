@@ -1,7 +1,7 @@
-import 'package:edugate_applocation/core/helpers/cached_data.dart';
 import 'package:edugate_applocation/features/setup_face_id/data/repos/setup_face_id_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
+import '../../../../core/networking/cache_helper.dart';
 import 'setup_face_id_state.dart';
 
 class SetupFaceIdCubit extends Cubit<SetupFaceIdState> {
@@ -13,7 +13,7 @@ class SetupFaceIdCubit extends Cubit<SetupFaceIdState> {
   void emitSetupFaceIdStates(XFile image) async {
     emit(const SetupFaceIdState.setupFaceIdLoading());
     final response = await _setupFaceIdRepo.setupFaceId(
-      CachedData.userName!,
+      CacheHelper.getData(key: 'userName').toString(),
       image.path,
     );
     response.when(
