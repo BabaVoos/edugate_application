@@ -1,23 +1,30 @@
 import 'package:edugate_applocation/core/networking/cache_helper.dart';
+import 'package:edugate_applocation/features/profile/data/models/update_profile_body.dart';
+import 'package:edugate_applocation/features/profile/data/repos/update_profile_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/helpers/cached_data.dart';
 import 'profile_state.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {
-  ProfileCubit() : super(const ProfileState.initial());
+  final UpdateProfileRepo _updateProfileRepo;
 
+  ProfileCubit(this._updateProfileRepo) : super(const ProfileState.initial());
+
+  // putting text controllers here for easy access and for reducing loads on UI
   TextEditingController mailController = TextEditingController();
   TextEditingController studentIdController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   void setDefaultUserData() {
-    mailController.text = CachedData.email ?? 'User Email';
-    studentIdController.text = CachedData.userName ?? 'User Id';
-    nameController.text = CachedData.displayName ?? 'User Name';
-    phoneNumberController.text = CachedData.phoneNumber ?? 'User Phone Number';
+    mailController.text = CacheHelper.getData(key: 'email') ?? 'User Email';
+    studentIdController.text =
+        CacheHelper.getData(key: 'userName') ?? 'User Id';
+    nameController.text =
+        CacheHelper.getData(key: 'displayName') ?? 'User Name';
+    phoneNumberController.text =
+        CacheHelper.getData(key: 'phoneNumber') ?? 'User Phone Number';
   }
 
   final List<String> images = [
@@ -35,5 +42,41 @@ class ProfileCubit extends Cubit<ProfileState> {
   void setAvatarImage(String image) {
     this.image = image;
     CacheHelper.saveData(key: 'AVATAR', value: image);
+  }
+
+  void emitUpdateProfileStates() async {
+    emit(const ProfileState.updateProfileloading());
+    final response = await _updateProfileRepo.updateUserProfile(
+      updateProfileBody: UpdateProfileBody(
+        displayName: nameController.text,
+        phoneNumber: phoneNumberController.text,
+      ),
+    );
+
+    response.when(
+      success: (updateProfileResponse) async {
+        saveUserDataToSharedPreference(updateProfileResponse)
+            .then((value) => emit(
+                  ProfileState.updateProfileSuccess(updateProfileResponse),
+                ));
+      },
+      failure: (error) {
+        emit(
+          ProfileState.updateProfileError(
+              message: error.apiErrorModel.errorMessage ?? ''),
+        );
+      },
+    );
+  }
+
+  Future<void> saveUserDataToSharedPreference(userData) async {
+    CacheHelper.saveData(key: 'userName', value: '${userData.userName}');
+    CacheHelper.saveData(
+      key: 'token',
+      value: CacheHelper.getData(key: 'token'),
+    );
+    CacheHelper.saveData(key: 'email', value: userData.email);
+    CacheHelper.saveData(key: 'displayName', value: userData.displayName);
+    CacheHelper.saveData(key: 'phoneNumber', value: userData.phoneNumber);
   }
 }

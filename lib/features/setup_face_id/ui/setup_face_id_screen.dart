@@ -1,4 +1,3 @@
-import 'package:edugate_applocation/core/helpers/cached_data.dart';
 import 'package:edugate_applocation/core/helpers/spacing.dart';
 import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
@@ -24,7 +23,6 @@ class SetupFaceIdScreen extends StatefulWidget {
 class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
   @override
   void initState() {
-    CachedData.getAndSaveUserData();
     setState(() {});
     super.initState();
   }
