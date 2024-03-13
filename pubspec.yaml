@@ -49,6 +49,8 @@ dependencies:
   cached_network_image: ^3.3.1
   #  Saves web files on the storages of the device
   flutter_cache_manager: ^3.3.1
+  # Render After Effects animations natively on Flutter
+  lottie: ^2.7.0
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
+    - assets/jsons/
 
   # fonts:
   #   - family: Schyler

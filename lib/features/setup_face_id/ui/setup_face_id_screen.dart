@@ -28,6 +28,7 @@ class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
   }
 
   XFile? image;
+  final ImagePicker picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
@@ -69,10 +70,12 @@ class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
   }
 
   Future<void> pickImageThenEmit(XFile? image) async {
-    image = await ImagePicker().pickImage(source: ImageSource.camera);
-    setState(() {});
-    if (image != null) {
-      context.read<SetupFaceIdCubit>().emitSetupFaceIdStates(image);
-    }
+    image = await picker.pickImage(source: ImageSource.camera).then(
+      (value) {
+        context.read<SetupFaceIdCubit>().emitSetupFaceIdStates(value!);
+        print(value.path);
+        return null;
+      },
+    );
   }
 }
