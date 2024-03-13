@@ -1,4 +1,5 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
+import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
 import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_cubit.dart';
@@ -6,6 +7,8 @@ import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_fac
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:icon_broken/icon_broken.dart';
+import 'package:lottie/lottie.dart';
 
 class SetupFaceIdBlocListener extends StatelessWidget {
   const SetupFaceIdBlocListener({super.key});
@@ -23,17 +26,15 @@ class SetupFaceIdBlocListener extends StatelessWidget {
           setupFaceIdLoading: () {
             showDialog(
               context: context,
-              builder: (context) => const Center(
-                child: CircularProgressIndicator(
-                  color: ColorsManager.orangeColor,
-                  strokeWidth: 2,
+              builder: (context) => Center(
+                child: Lottie.asset(
+                  'assets/jsons/loading_hand.json',
                 ),
               ),
             );
           },
           setupFaceIdSuccess: (loginResponse) {
             setupErroState(context, loginResponse.message);
-            // context.pushReplacementNamed(Routes.setupFaceIdScreen);
           },
           setupFaceIError: (error) {
             setupErroState(
@@ -61,18 +62,18 @@ class SetupFaceIdBlocListener extends StatelessWidget {
         ),
         backgroundColor: ColorsManager.whiteColor,
         icon: Icon(
-          Icons.report_problem_outlined,
-          color: ColorsManager.orangeColor,
+          IconBroken.Shield_Done,
+          color: ColorsManager.blueColor,
           size: 40.sp,
         ),
         content: Text(
           error,
-          style: TextStyles.font14BlackMedium,
+          style: TextStyles.font16GreyMedium,
         ),
         actions: [
           TextButton(
             onPressed: () {
-              context.pop();
+              context.pushReplacementNamed(Routes.loginScreen);
             },
             child: Text(
               'Got it',
