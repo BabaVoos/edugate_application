@@ -10,6 +10,7 @@ import 'package:edugate_applocation/features/register/ui/register_screen.dart';
 import 'package:edugate_applocation/features/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/course_attendance/ui/course_attendance_screen.dart';
 import '../../features/help/ui/help_screen.dart';
 import '../../features/home/ui/home_screen.dart';
 import '../../features/profile/ui/profile_screen.dart';
@@ -60,6 +61,12 @@ class AppRouter {
       case Routes.helpScreen:
         return MaterialPageRoute(
           builder: (_) => const HelpScreen(),
+        );
+      case Routes.courseAttendanceScreen:
+        return MaterialPageRoute(
+          builder: (_) => CourseAttendanceScreen(
+            courseName: arguments.toString(),
+          ),
         );
       default:
         return MaterialPageRoute(
