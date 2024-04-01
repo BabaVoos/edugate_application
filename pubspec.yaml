@@ -38,7 +38,7 @@ dependencies:
   retrofit: ^4.0.3
   retrofit_generator: ^8.0.4
   # A Flutter package to use fonts from google fonts
-  google_fonts: ^6.1.0
+  # google_fonts: ^6.1.0
   # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
   shared_preferences: ^2.2.2
   # For Picking images from gallery or camera
@@ -51,6 +51,9 @@ dependencies:
   flutter_cache_manager: ^3.3.1
   # Render After Effects animations natively on Flutter
   lottie: ^2.7.0
+  # QR code generator and scanner
+  qr_bar_code_scanner_dialog: ^0.0.5
+
 
 dev_dependencies:
   flutter_test:

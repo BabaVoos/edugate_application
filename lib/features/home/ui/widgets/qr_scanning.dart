@@ -1,14 +1,21 @@
+import 'package:edugate_applocation/core/helpers/extinsions.dart';
+import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_button.dart';
 
 class QrScanningWidget extends StatelessWidget {
-  const QrScanningWidget({
+  QrScanningWidget({
     super.key,
   });
+
+  final _qrBarCodeScannerDialogPlugin = QrBarCodeScannerDialog();
+
+  String? qrResult;
 
   @override
   Widget build(BuildContext context) {
@@ -48,10 +55,27 @@ class QrScanningWidget extends StatelessWidget {
             backgroundColor: ColorsManager.orangeColor,
             borderRadius: 16.sp,
             buttonText: 'Scan',
-            onPressed: () {},
+            onPressed: () {
+              scanQRCode(context);
+            },
           ),
         ],
       ),
+    );
+  }
+
+  void scanQRCode(BuildContext context) {
+    _qrBarCodeScannerDialogPlugin.getScannedQrBarCode(
+      context: context,
+      onCode: (code) {
+        qrResult = code;
+        if (qrResult != null) {
+          context.pushNamed(
+            Routes.checkAttendanceScreen,
+            arguments: qrResult,
+          );
+        }
+      },
     );
   }
 }
