@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable
 import 'package:edugate_applocation/core/di/dependency_injection.dart';
 import 'package:edugate_applocation/core/routing/router.dart';
+import 'package:edugate_applocation/features/check_attendance/ui/check_attendance_screen.dart';
 import 'package:edugate_applocation/features/home/ui/edugate_layout.dart';
 import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_cubit.dart';
 import 'package:edugate_applocation/features/setup_face_id/ui/setup_face_id_screen.dart';
@@ -66,6 +67,12 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => CourseAttendanceScreen(
             courseName: arguments.toString(),
+          ),
+        );
+      case Routes.checkAttendanceScreen:
+        return MaterialPageRoute(
+          builder: (_) => CheckAttendanceScreen(
+            qrResult: arguments.toString(),
           ),
         );
       default:
