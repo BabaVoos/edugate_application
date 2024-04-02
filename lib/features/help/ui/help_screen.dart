@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../widgets/question_answer_widget.dart';
+import 'widgets/question_answer_widget.dart';
 
 class HelpScreen extends StatelessWidget {
   const HelpScreen({super.key});
