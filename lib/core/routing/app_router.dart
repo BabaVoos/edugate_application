@@ -2,6 +2,8 @@
 import 'package:edugate_applocation/core/di/dependency_injection.dart';
 import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:edugate_applocation/features/check_attendance/ui/check_attendance_screen.dart';
+import 'package:edugate_applocation/features/home/data/models/qr_code_data_model.dart';
+import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_cubit.dart';
 import 'package:edugate_applocation/features/home/ui/edugate_layout.dart';
 import 'package:edugate_applocation/features/setup_face_id/logic/cubit/setup_face_id_cubit.dart';
 import 'package:edugate_applocation/features/setup_face_id/ui/setup_face_id_screen.dart';
@@ -53,7 +55,10 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => HomeCubit(),
+            child: const HomeScreen(),
+          ),
         );
       case Routes.profileScreen:
         return MaterialPageRoute(
@@ -72,7 +77,7 @@ class AppRouter {
       case Routes.checkAttendanceScreen:
         return MaterialPageRoute(
           builder: (_) => CheckAttendanceScreen(
-            qrResult: arguments.toString(),
+            qrResult: arguments as QRCodeDataModel,
           ),
         );
       default:

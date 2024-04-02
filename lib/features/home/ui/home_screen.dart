@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const GrettingsText(),
             verticalSpacing(20),
-            QrScanningWidget(),
+            const QrScanningWidget(),
             verticalSpacing(20),
             const CoursesSection(),
             verticalSpacing(20),
