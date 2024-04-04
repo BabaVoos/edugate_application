@@ -1,3 +1,4 @@
+import 'package:edugate_applocation/features/home/ui/widgets/currentLocationWidget.dart';
 import 'package:edugate_applocation/features/home/ui/widgets/latest_attendances_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,6 +22,8 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const GrettingsText(),
+            verticalSpacing(5),
+            const CurrentLocationWidget(),
             verticalSpacing(20),
             const QrScanningWidget(),
             verticalSpacing(20),
