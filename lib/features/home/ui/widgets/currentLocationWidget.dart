@@ -17,24 +17,26 @@ class CurrentLocationWidget extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         if (state is GetLocationSuccess) {
-          return Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: Row(
-              children: [
-                Text(
-                  LocationHelper.currentLocation!,
-                  style: TextStyles.font14BlackMedium.copyWith(
-                    color: ColorsManager.greyColor.withOpacity(.7),
+          return LocationHelper.currentLocation != null
+              ? Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24.w),
+                  child: Row(
+                    children: [
+                      Text(
+                        LocationHelper.currentLocation ?? '',
+                        style: TextStyles.font14BlackMedium.copyWith(
+                          color: ColorsManager.greyColor.withOpacity(.7),
+                        ),
+                      ),
+                      const Spacer(),
+                      Icon(
+                        IconBroken.Location,
+                        color: ColorsManager.greyColor.withOpacity(.7),
+                      ),
+                    ],
                   ),
-                ),
-                const Spacer(),
-                Icon(
-                  IconBroken.Location,
-                  color: ColorsManager.greyColor.withOpacity(.7),
-                ),
-              ],
-            ),
-          );
+                )
+              : const SizedBox.shrink();
         } else {
           return const SizedBox.shrink();
         }
