@@ -1,8 +1,9 @@
+import 'package:edugate_applocation/core/helpers/location_helper.dart';
 import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:icon_broken/icon_broken.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../../logic/cubit/cubit/home_cubit.dart';
@@ -18,11 +19,20 @@ class CurrentLocationWidget extends StatelessWidget {
         if (state is GetLocationSuccess) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: Text(
-              context.read<HomeCubit>().currentLocation!,
-              style: TextStyles.font14BlackMedium.copyWith(
-                color: ColorsManager.greyColor.withOpacity(.7),
-              ),
+            child: Row(
+              children: [
+                Text(
+                  LocationHelper.currentLocation!,
+                  style: TextStyles.font14BlackMedium.copyWith(
+                    color: ColorsManager.greyColor.withOpacity(.7),
+                  ),
+                ),
+                const Spacer(),
+                Icon(
+                  IconBroken.Location,
+                  color: ColorsManager.greyColor.withOpacity(.7),
+                ),
+              ],
             ),
           );
         } else {

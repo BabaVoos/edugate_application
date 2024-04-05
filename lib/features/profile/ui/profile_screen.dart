@@ -7,7 +7,7 @@ import '../../../core/helpers/spacing.dart';
 import '../logic/cubit/profile_cubit.dart';
 import 'widgets/pick_image_widget.dart';
 import 'widgets/profile_user_data.dart';
-import 'widgets/show_message_to_user.dart';
+import '../../../core/widgets/show_message_to_user.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
