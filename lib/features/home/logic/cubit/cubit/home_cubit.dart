@@ -1,10 +1,11 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
+import 'package:edugate_applocation/core/helpers/location_helper.dart';
 import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_state.dart';
-import 'package:edugate_applocation/features/profile/ui/widgets/show_message_to_user.dart';
+import 'package:edugate_applocation/core/widgets/show_message_to_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 import '../../../../../core/routing/router.dart';
 import '../../../data/models/qr_code_data_model.dart';
@@ -14,21 +15,15 @@ class HomeCubit extends Cubit<HomeState> {
 
   final _qrBarCodeScannerDialogPlugin = QrBarCodeScannerDialog();
 
-  Position? position;
-  bool? locationService;
-  LocationPermission? locationPermission;
-  String? currentLocation;
-
   Future<QRCodeDataModel> decodeQrData({required String qrData}) async {
     List<String> decodedData = qrData.split('- ');
     return QRCodeDataModel(
-      courseName: decodedData[0].trim(),
-      group: decodedData[1].trim(),
-      week: decodedData[2].trim(),
-      longitude: double.parse(decodedData[3].trim()),
-      latitude: double.parse(decodedData[4].trim()),
-      time: DateTime.parse(decodedData[5].trim()),
-    );
+        courseName: decodedData[0].trim(),
+        group: decodedData[1].trim(),
+        week: decodedData[2].trim(),
+        longitude: double.parse(decodedData[3].trim()),
+        latitude: double.parse(decodedData[4].trim()),
+        time: DateTime.parse(decodedData[5].trim()));
   }
 
   void scanQRCode(BuildContext context) {
@@ -39,7 +34,14 @@ class HomeCubit extends Cubit<HomeState> {
           qrData: code!,
         ).then(
           (value) {
-            checkTimeBetweenGenerateAndScan(value, context);
+            if (checkTimeBetweenGenerateAndScan(value, context) &&
+                LocationHelper.checkDistance(
+                    value.latitude, value.longitude, context)) {
+              context.pushNamed(
+                Routes.checkAttendanceScreen,
+                arguments: value,
+              );
+            }
             return null;
           },
         );
@@ -47,46 +49,33 @@ class HomeCubit extends Cubit<HomeState> {
     );
   }
 
-  void checkTimeBetweenGenerateAndScan(
+  bool checkTimeBetweenGenerateAndScan(
       QRCodeDataModel value, BuildContext context) {
     if (DateTime.now().difference(value.time).inHours < 1) {
-      context.pushNamed(
-        Routes.checkAttendanceScreen,
-        arguments: value,
-      );
+      return true;
     } else {
       showMessageToUser(context,
           textAlign: TextAlign.start,
+          widget: Lottie.asset(
+            'assets/jsons/timer.json',
+            height: 100.h,
+            width: 100.w,
+          ),
           message:
               'It seems like there has been a gap in your attendance. Don\'t worry, reaching out to your doctor can help get things back on track.');
+      return false;
     }
   }
 
-  void getCurrentLocation() async {
+  void getCurrentLocation() {
     emit(const HomeState.getLocationLoading());
-    try {
-      await checkLocationServiceAndPermission();
-      position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
-      );
-      List<Placemark> placeMarks = await placemarkFromCoordinates(
-        position!.latitude,
-        position!.longitude,
-      );
-      currentLocation =
-          '${placeMarks[0].subAdministrativeArea}, ${placeMarks[0].thoroughfare}';
-      emit(HomeState.getLocationSuccess(currentLocation!));
-    } catch (e) {
+    LocationHelper.getCurrentLocation().then((value) {
+      emit(const HomeState.getLocationSuccess(
+        'Current Location',
+      ));
+    }).catchError((e) {
+      print(e);
       emit(HomeState.getLocationFailed(message: e.toString()));
-    }
-  }
-
-  Future<void> checkLocationServiceAndPermission() async {
-    locationService = await Geolocator.isLocationServiceEnabled();
-    locationPermission = await Geolocator.checkPermission();
-    
-    if (locationPermission == LocationPermission.denied) {
-      locationPermission = await Geolocator.requestPermission();
-    }
+    });
   }
 }

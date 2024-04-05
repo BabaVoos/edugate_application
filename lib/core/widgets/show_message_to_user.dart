@@ -1,13 +1,14 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
 import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/theming/styles.dart';
+import '../theming/styles.dart';
 
 Future<dynamic> showMessageToUser(BuildContext context,
-    {required String message, TextAlign? textAlign}) {
+    {required String message, TextAlign? textAlign, Widget? widget}) {
   return showDialog(
     context: context,
     builder: (context) => AlertDialog(
+      icon: widget ?? const SizedBox.shrink(),
       title: Text(
         message,
         style: TextStyles.font18WhiteSemiBold

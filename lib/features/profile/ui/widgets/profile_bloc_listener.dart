@@ -1,5 +1,5 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
-import 'package:edugate_applocation/features/profile/ui/widgets/show_message_to_user.dart';
+import 'package:edugate_applocation/core/widgets/show_message_to_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
