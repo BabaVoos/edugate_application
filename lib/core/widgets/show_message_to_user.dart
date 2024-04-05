@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import '../theming/styles.dart';
 
 Future<dynamic> showMessageToUser(BuildContext context,
-    {required String message, TextAlign? textAlign, Widget? widget}) {
+    {required String message,
+    TextAlign? textAlign,
+    Widget? widget,
+    String? buttonText,
+    void Function()? onTap}) {
   return showDialog(
     context: context,
     builder: (context) => AlertDialog(
@@ -23,10 +27,10 @@ Future<dynamic> showMessageToUser(BuildContext context,
       actions: [
         TextButton(
           onPressed: () {
-            context.pop();
+            onTap ?? context.pop();
           },
           child: Text(
-            'Got it',
+            buttonText ?? 'Got it',
             style: TextStyles.font16GreyMedium,
           ),
         ),

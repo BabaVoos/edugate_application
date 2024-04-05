@@ -19,7 +19,10 @@ class LocationHelper {
     if (locationPermission == LocationPermission.denied) {
       locationPermission = await Geolocator.requestPermission();
     } else if (locationPermission == LocationPermission.deniedForever) {
+      locationPermission = await Geolocator.requestPermission();
       openAppSettings();
+    } else if (locationPermission == LocationPermission.unableToDetermine) {
+      locationPermission = await Geolocator.requestPermission();
     }
   }
 
