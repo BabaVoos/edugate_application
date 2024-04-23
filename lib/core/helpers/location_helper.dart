@@ -36,7 +36,7 @@ class LocationHelper {
     });
   }
 
-  static Future<void> getCurrentLocation() async {
+  static Future<String> getCurrentLocation() async {
     try {
       await checkLocationServiceAndPermission();
       position = await Geolocator.getCurrentPosition(
@@ -51,8 +51,10 @@ class LocationHelper {
 
       print(
           'lattitude: ${position!.latitude} longitude: ${position!.longitude}');
+          return currentLocation!;
     } catch (e) {
       print(e);
+      return '';
     }
   }
 

@@ -22,6 +22,9 @@ mixin _$HomeState<T> {
     required TResult Function() getLocationLoading,
     required TResult Function(T data) getLocationSuccess,
     required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$HomeState<T> {
     TResult? Function()? getLocationLoading,
     TResult? Function(T data)? getLocationSuccess,
     TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$HomeState<T> {
     TResult Function()? getLocationLoading,
     TResult Function(T data)? getLocationSuccess,
     TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$HomeState<T> {
     required TResult Function(GetLocationLoading<T> value) getLocationLoading,
     required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
     required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$HomeState<T> {
     TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$HomeState<T> {
     TResult Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +146,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() getLocationLoading,
     required TResult Function(T data) getLocationSuccess,
     required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
   }) {
     return initial();
   }
@@ -139,6 +160,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? getLocationLoading,
     TResult? Function(T data)? getLocationSuccess,
     TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
   }) {
     return initial?.call();
   }
@@ -150,6 +174,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? getLocationLoading,
     TResult Function(T data)? getLocationSuccess,
     TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +192,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(GetLocationLoading<T> value) getLocationLoading,
     required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
     required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
   }) {
     return initial(this);
   }
@@ -176,6 +206,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +220,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -243,6 +279,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     required TResult Function() getLocationLoading,
     required TResult Function(T data) getLocationSuccess,
     required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
   }) {
     return getLocationLoading();
   }
@@ -254,6 +293,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult? Function()? getLocationLoading,
     TResult? Function(T data)? getLocationSuccess,
     TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
   }) {
     return getLocationLoading?.call();
   }
@@ -265,6 +307,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult Function()? getLocationLoading,
     TResult Function(T data)? getLocationSuccess,
     TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (getLocationLoading != null) {
@@ -280,6 +325,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     required TResult Function(GetLocationLoading<T> value) getLocationLoading,
     required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
     required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
   }) {
     return getLocationLoading(this);
   }
@@ -291,6 +339,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
   }) {
     return getLocationLoading?.call(this);
   }
@@ -302,6 +353,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (getLocationLoading != null) {
@@ -385,6 +439,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     required TResult Function() getLocationLoading,
     required TResult Function(T data) getLocationSuccess,
     required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
   }) {
     return getLocationSuccess(data);
   }
@@ -396,6 +453,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult? Function()? getLocationLoading,
     TResult? Function(T data)? getLocationSuccess,
     TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
   }) {
     return getLocationSuccess?.call(data);
   }
@@ -407,6 +467,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult Function()? getLocationLoading,
     TResult Function(T data)? getLocationSuccess,
     TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (getLocationSuccess != null) {
@@ -422,6 +485,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     required TResult Function(GetLocationLoading<T> value) getLocationLoading,
     required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
     required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
   }) {
     return getLocationSuccess(this);
   }
@@ -433,6 +499,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
   }) {
     return getLocationSuccess?.call(this);
   }
@@ -444,6 +513,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (getLocationSuccess != null) {
@@ -532,6 +604,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     required TResult Function() getLocationLoading,
     required TResult Function(T data) getLocationSuccess,
     required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
   }) {
     return getLocationFailed(message);
   }
@@ -543,6 +618,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult? Function()? getLocationLoading,
     TResult? Function(T data)? getLocationSuccess,
     TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
   }) {
     return getLocationFailed?.call(message);
   }
@@ -554,6 +632,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult Function()? getLocationLoading,
     TResult Function(T data)? getLocationSuccess,
     TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (getLocationFailed != null) {
@@ -569,6 +650,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     required TResult Function(GetLocationLoading<T> value) getLocationLoading,
     required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
     required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
   }) {
     return getLocationFailed(this);
   }
@@ -580,6 +664,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
   }) {
     return getLocationFailed?.call(this);
   }
@@ -591,6 +678,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult Function(GetLocationLoading<T> value)? getLocationLoading,
     TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
     TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
     required TResult orElse(),
   }) {
     if (getLocationFailed != null) {
@@ -608,4 +698,468 @@ abstract class GetLocationFailed<T> implements HomeState<T> {
   @JsonKey(ignore: true)
   _$$GetLocationFailedImplCopyWith<T, _$GetLocationFailedImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCoursesLoadingImplCopyWith<T, $Res> {
+  factory _$$GetCoursesLoadingImplCopyWith(_$GetCoursesLoadingImpl<T> value,
+          $Res Function(_$GetCoursesLoadingImpl<T>) then) =
+      __$$GetCoursesLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetCoursesLoadingImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$GetCoursesLoadingImpl<T>>
+    implements _$$GetCoursesLoadingImplCopyWith<T, $Res> {
+  __$$GetCoursesLoadingImplCopyWithImpl(_$GetCoursesLoadingImpl<T> _value,
+      $Res Function(_$GetCoursesLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
+  const _$GetCoursesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getCoursesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCoursesLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getLocationLoading,
+    required TResult Function(T data) getLocationSuccess,
+    required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
+  }) {
+    return getCoursesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getLocationLoading,
+    TResult? Function(T data)? getLocationSuccess,
+    TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
+  }) {
+    return getCoursesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getLocationLoading,
+    TResult Function(T data)? getLocationSuccess,
+    TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
+    required TResult orElse(),
+  }) {
+    if (getCoursesLoading != null) {
+      return getCoursesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetLocationLoading<T> value) getLocationLoading,
+    required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
+    required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+  }) {
+    return getCoursesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+  }) {
+    return getCoursesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    required TResult orElse(),
+  }) {
+    if (getCoursesLoading != null) {
+      return getCoursesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCoursesLoading<T> implements HomeState<T> {
+  const factory GetCoursesLoading() = _$GetCoursesLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetCoursesSuccessImplCopyWith<T, $Res> {
+  factory _$$GetCoursesSuccessImplCopyWith(_$GetCoursesSuccessImpl<T> value,
+          $Res Function(_$GetCoursesSuccessImpl<T>) then) =
+      __$$GetCoursesSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$GetCoursesSuccessImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$GetCoursesSuccessImpl<T>>
+    implements _$$GetCoursesSuccessImplCopyWith<T, $Res> {
+  __$$GetCoursesSuccessImplCopyWithImpl(_$GetCoursesSuccessImpl<T> _value,
+      $Res Function(_$GetCoursesSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetCoursesSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
+  const _$GetCoursesSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getCoursesSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCoursesSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCoursesSuccessImplCopyWith<T, _$GetCoursesSuccessImpl<T>>
+      get copyWith =>
+          __$$GetCoursesSuccessImplCopyWithImpl<T, _$GetCoursesSuccessImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getLocationLoading,
+    required TResult Function(T data) getLocationSuccess,
+    required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
+  }) {
+    return getCoursesSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getLocationLoading,
+    TResult? Function(T data)? getLocationSuccess,
+    TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
+  }) {
+    return getCoursesSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getLocationLoading,
+    TResult Function(T data)? getLocationSuccess,
+    TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
+    required TResult orElse(),
+  }) {
+    if (getCoursesSuccess != null) {
+      return getCoursesSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetLocationLoading<T> value) getLocationLoading,
+    required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
+    required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+  }) {
+    return getCoursesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+  }) {
+    return getCoursesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    required TResult orElse(),
+  }) {
+    if (getCoursesSuccess != null) {
+      return getCoursesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCoursesSuccess<T> implements HomeState<T> {
+  const factory GetCoursesSuccess(final T data) = _$GetCoursesSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$GetCoursesSuccessImplCopyWith<T, _$GetCoursesSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCoursesFailedImplCopyWith<T, $Res> {
+  factory _$$GetCoursesFailedImplCopyWith(_$GetCoursesFailedImpl<T> value,
+          $Res Function(_$GetCoursesFailedImpl<T>) then) =
+      __$$GetCoursesFailedImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetCoursesFailedImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$GetCoursesFailedImpl<T>>
+    implements _$$GetCoursesFailedImplCopyWith<T, $Res> {
+  __$$GetCoursesFailedImplCopyWithImpl(_$GetCoursesFailedImpl<T> _value,
+      $Res Function(_$GetCoursesFailedImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetCoursesFailedImpl<T>(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
+  const _$GetCoursesFailedImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getCoursesFailed(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCoursesFailedImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCoursesFailedImplCopyWith<T, _$GetCoursesFailedImpl<T>> get copyWith =>
+      __$$GetCoursesFailedImplCopyWithImpl<T, _$GetCoursesFailedImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getLocationLoading,
+    required TResult Function(T data) getLocationSuccess,
+    required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
+  }) {
+    return getCoursesFailed(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getLocationLoading,
+    TResult? Function(T data)? getLocationSuccess,
+    TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
+  }) {
+    return getCoursesFailed?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getLocationLoading,
+    TResult Function(T data)? getLocationSuccess,
+    TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
+    required TResult orElse(),
+  }) {
+    if (getCoursesFailed != null) {
+      return getCoursesFailed(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetLocationLoading<T> value) getLocationLoading,
+    required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
+    required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+  }) {
+    return getCoursesFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+  }) {
+    return getCoursesFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    required TResult orElse(),
+  }) {
+    if (getCoursesFailed != null) {
+      return getCoursesFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCoursesFailed<T> implements HomeState<T> {
+  const factory GetCoursesFailed({required final String message}) =
+      _$GetCoursesFailedImpl<T>;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$GetCoursesFailedImplCopyWith<T, _$GetCoursesFailedImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

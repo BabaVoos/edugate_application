@@ -1,5 +1,7 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
 import 'package:edugate_applocation/core/helpers/location_helper.dart';
+import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
+import 'package:edugate_applocation/features/home/data/reops/get_courses_repo.dart';
 import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_state.dart';
 import 'package:edugate_applocation/core/widgets/show_message_to_user.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +13,8 @@ import '../../../../../core/routing/router.dart';
 import '../../../data/models/qr_code_data_model.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit() : super(const HomeState.initial());
+  final GetCoursesRepo _getCoursesRepo;
+  HomeCubit(this._getCoursesRepo) : super(const HomeState.initial());
 
   final _qrBarCodeScannerDialogPlugin = QrBarCodeScannerDialog();
 
@@ -67,9 +70,12 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
+  String currentLocation = '';
+
   void getCurrentLocation() {
     emit(const HomeState.getLocationLoading());
     LocationHelper.getCurrentLocation().then((value) {
+      currentLocation = value;
       emit(const HomeState.getLocationSuccess(
         'Current Location',
       ));
@@ -77,5 +83,22 @@ class HomeCubit extends Cubit<HomeState> {
       print(e);
       emit(HomeState.getLocationFailed(message: e.toString()));
     });
+  }
+
+  List<GetCoursesResponse> courses = [];
+  List<GetCoursesResponse> emitGetCoursesState() {
+    emit(const HomeState.getCoursesLoading());
+    final response = _getCoursesRepo.getCourses().then((value) {
+      value.when(
+        success: (getCoursesRepsonse) {
+          courses = getCoursesRepsonse;
+          emit(GetCoursesSuccess(getCoursesRepsonse));
+        },
+        failure: (error) => HomeState.getCoursesFailed(
+          message: error.apiErrorModel.errorMessage ?? '',
+        ),
+      );
+    });
+    return courses;
   }
 }
