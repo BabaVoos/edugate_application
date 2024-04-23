@@ -22,6 +22,8 @@ class CourseWidget extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(right: 16.w),
         child: Container(
+          height: 70.h,
+          width: 70.w,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.white,
@@ -40,13 +42,11 @@ class CourseWidget extends StatelessWidget {
               ),
             ],
           ),
-          padding: EdgeInsets.symmetric(
-            vertical: 25.h,
-            horizontal: 25.w,
-          ),
-          child: Text(
-            courseName[0],
-            style: TextStyles.font24BlueSemiBold,
+          child: Center(
+            child: Text(
+              courseName[0].toUpperCase() + courseName[1].toLowerCase(),
+              style: TextStyles.font20BlueSemiBold,
+            ),
           ),
         ),
       ),

@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://edugate.somee.com/api/';
+    baseUrl ??= 'https://67b5-196-129-112-232.ngrok-free.app//api/';
   }
 
   final Dio _dio;
@@ -106,6 +106,36 @@ class _ApiService implements ApiService {
               baseUrl,
             ))));
     final value = UpdateProfileResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<List<GetCoursesResponse>> getCourses(String studentId) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'studentId': studentId};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<GetCoursesResponse>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'studentCourseGroup/AppStudentCourse',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var value = _result.data!
+        .map((dynamic i) =>
+            GetCoursesResponse.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 

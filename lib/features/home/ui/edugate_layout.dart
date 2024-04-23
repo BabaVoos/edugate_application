@@ -27,7 +27,7 @@ class _EdugateLayoutState extends State<EdugateLayout> {
 
   List<Widget> screens = [
     BlocProvider(
-      create: (context) => HomeCubit()
+      create: (context) => getIt<HomeCubit>() 
         ..getCurrentLocation(),
       child: const HomeScreen(),
     ),

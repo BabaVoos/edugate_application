@@ -1,9 +1,11 @@
 class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
+  static const String testingBaseUrl = 'https://67b5-196-129-112-232.ngrok-free.app//api/';
   static const String login = 'account/login';
   static const String register = 'account/register';
   static const String uploadImage = 'UploadImage/uploadfile';
   static const String updateUserProfile = 'account';
+  static const String getCourses = 'studentCourseGroup/AppStudentCourse';
 }
 
 class ApiErrors {
