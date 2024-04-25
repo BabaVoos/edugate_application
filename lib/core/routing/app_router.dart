@@ -2,6 +2,8 @@
 import 'package:edugate_applocation/core/di/dependency_injection.dart';
 import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:edugate_applocation/features/check_attendance/ui/check_attendance_screen.dart';
+import 'package:edugate_applocation/features/course_attendance/logic/cubit/course_attendance_cubit.dart';
+import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
 import 'package:edugate_applocation/features/home/data/models/qr_code_data_model.dart';
 import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_cubit.dart';
 import 'package:edugate_applocation/features/home/ui/edugate_layout.dart';
@@ -70,8 +72,11 @@ class AppRouter {
         );
       case Routes.courseAttendanceScreen:
         return MaterialPageRoute(
-          builder: (_) => CourseAttendanceScreen(
-            courseName: arguments.toString(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<CourseAttendanceCubit>(),
+            child: CourseAttendanceScreen(
+              course: arguments as GetCoursesResponse,
+            ),
           ),
         );
       case Routes.checkAttendanceScreen:
