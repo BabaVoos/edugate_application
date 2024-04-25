@@ -1,5 +1,6 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
 import 'package:edugate_applocation/core/routing/router.dart';
+import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/colors.dart';
@@ -8,16 +9,16 @@ import '../../../../core/theming/styles.dart';
 class CourseWidget extends StatelessWidget {
   const CourseWidget({
     super.key,
-    required this.courseName,
+    required this.course,
   });
 
-  final String courseName;
+  final GetCoursesResponse course;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(Routes.courseAttendanceScreen, arguments: courseName);
+        context.pushNamed(Routes.courseAttendanceScreen, arguments: course);
       },
       child: Padding(
         padding: EdgeInsets.only(right: 16.w),
@@ -44,7 +45,7 @@ class CourseWidget extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              courseName[0].toUpperCase() + courseName[1].toLowerCase(),
+              course.courseName![0].toUpperCase() + course.courseName![1].toLowerCase(),
               style: TextStyles.font20BlueSemiBold,
             ),
           ),

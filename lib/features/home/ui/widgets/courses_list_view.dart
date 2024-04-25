@@ -34,7 +34,7 @@ class CoursesListView extends StatelessWidget {
               itemCount: courses.length,
               itemBuilder: (context, index) {
                 return CourseWidget(
-                  courseName: courses[index].courseName!,
+                  course: courses[index],
                 );
               },
             ),

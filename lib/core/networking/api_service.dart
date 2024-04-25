@@ -8,6 +8,8 @@ import 'package:edugate_applocation/features/register/data/models/register_reque
 import 'package:edugate_applocation/features/register/data/models/register_response.dart';
 import 'package:retrofit/http.dart';
 
+import '../../features/course_attendance/data/models/get_course_attendance_request_body.dart';
+import '../../features/course_attendance/data/models/get_course_attendance_response.dart';
 import '../../features/profile/data/models/update_profile_body.dart';
 part 'api_service.g.dart';
 
@@ -34,5 +36,10 @@ abstract class ApiService {
   @GET(ApiConstants.getCourses)
   Future<List<GetCoursesResponse>> getCourses(
     @Query("studentId") String studentId,
+  );
+
+  @GET(ApiConstants.getCourseAttendance)
+  Future<List<GetCourseAttendanceResponse>> getCourseAttendance(
+    @Body() GetCourseAttendanceRequestBody getCourseAttendanceRequestBody,
   );
 }
