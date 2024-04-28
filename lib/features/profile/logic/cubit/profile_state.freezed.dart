@@ -22,6 +22,8 @@ mixin _$ProfileState<T> {
     required TResult Function() updateProfileloading,
     required TResult Function(T data) updateProfileSuccess,
     required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$ProfileState<T> {
     TResult? Function()? updateProfileloading,
     TResult? Function(T data)? updateProfileSuccess,
     TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$ProfileState<T> {
     TResult Function()? updateProfileloading,
     TResult Function(T data)? updateProfileSuccess,
     TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +55,8 @@ mixin _$ProfileState<T> {
     required TResult Function(UpdateProfileSuccess<T> value)
         updateProfileSuccess,
     required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +65,8 @@ mixin _$ProfileState<T> {
     TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +75,8 @@ mixin _$ProfileState<T> {
     TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -130,6 +142,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() updateProfileloading,
     required TResult Function(T data) updateProfileSuccess,
     required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
   }) {
     return initial();
   }
@@ -141,6 +155,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? updateProfileloading,
     TResult? Function(T data)? updateProfileSuccess,
     TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
   }) {
     return initial?.call();
   }
@@ -152,6 +168,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? updateProfileloading,
     TResult Function(T data)? updateProfileSuccess,
     TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -169,6 +187,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(UpdateProfileSuccess<T> value)
         updateProfileSuccess,
     required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return initial(this);
   }
@@ -180,6 +200,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return initial?.call(this);
   }
@@ -191,6 +213,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -248,6 +272,8 @@ class _$UpdateProfileloadingImpl<T> implements UpdateProfileloading<T> {
     required TResult Function() updateProfileloading,
     required TResult Function(T data) updateProfileSuccess,
     required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
   }) {
     return updateProfileloading();
   }
@@ -259,6 +285,8 @@ class _$UpdateProfileloadingImpl<T> implements UpdateProfileloading<T> {
     TResult? Function()? updateProfileloading,
     TResult? Function(T data)? updateProfileSuccess,
     TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
   }) {
     return updateProfileloading?.call();
   }
@@ -270,6 +298,8 @@ class _$UpdateProfileloadingImpl<T> implements UpdateProfileloading<T> {
     TResult Function()? updateProfileloading,
     TResult Function(T data)? updateProfileSuccess,
     TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
     required TResult orElse(),
   }) {
     if (updateProfileloading != null) {
@@ -287,6 +317,8 @@ class _$UpdateProfileloadingImpl<T> implements UpdateProfileloading<T> {
     required TResult Function(UpdateProfileSuccess<T> value)
         updateProfileSuccess,
     required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return updateProfileloading(this);
   }
@@ -298,6 +330,8 @@ class _$UpdateProfileloadingImpl<T> implements UpdateProfileloading<T> {
     TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return updateProfileloading?.call(this);
   }
@@ -309,6 +343,8 @@ class _$UpdateProfileloadingImpl<T> implements UpdateProfileloading<T> {
     TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (updateProfileloading != null) {
@@ -393,6 +429,8 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     required TResult Function() updateProfileloading,
     required TResult Function(T data) updateProfileSuccess,
     required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
   }) {
     return updateProfileSuccess(data);
   }
@@ -404,6 +442,8 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult? Function()? updateProfileloading,
     TResult? Function(T data)? updateProfileSuccess,
     TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
   }) {
     return updateProfileSuccess?.call(data);
   }
@@ -415,6 +455,8 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult Function()? updateProfileloading,
     TResult Function(T data)? updateProfileSuccess,
     TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
     required TResult orElse(),
   }) {
     if (updateProfileSuccess != null) {
@@ -432,6 +474,8 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     required TResult Function(UpdateProfileSuccess<T> value)
         updateProfileSuccess,
     required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return updateProfileSuccess(this);
   }
@@ -443,6 +487,8 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return updateProfileSuccess?.call(this);
   }
@@ -454,6 +500,8 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (updateProfileSuccess != null) {
@@ -542,6 +590,8 @@ class _$UpdateProfileErrorImpl<T> implements UpdateProfileError<T> {
     required TResult Function() updateProfileloading,
     required TResult Function(T data) updateProfileSuccess,
     required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
   }) {
     return updateProfileError(message);
   }
@@ -553,6 +603,8 @@ class _$UpdateProfileErrorImpl<T> implements UpdateProfileError<T> {
     TResult? Function()? updateProfileloading,
     TResult? Function(T data)? updateProfileSuccess,
     TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
   }) {
     return updateProfileError?.call(message);
   }
@@ -564,6 +616,8 @@ class _$UpdateProfileErrorImpl<T> implements UpdateProfileError<T> {
     TResult Function()? updateProfileloading,
     TResult Function(T data)? updateProfileSuccess,
     TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
     required TResult orElse(),
   }) {
     if (updateProfileError != null) {
@@ -581,6 +635,8 @@ class _$UpdateProfileErrorImpl<T> implements UpdateProfileError<T> {
     required TResult Function(UpdateProfileSuccess<T> value)
         updateProfileSuccess,
     required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return updateProfileError(this);
   }
@@ -592,6 +648,8 @@ class _$UpdateProfileErrorImpl<T> implements UpdateProfileError<T> {
     TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return updateProfileError?.call(this);
   }
@@ -603,6 +661,8 @@ class _$UpdateProfileErrorImpl<T> implements UpdateProfileError<T> {
     TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
     TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
     TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (updateProfileError != null) {
@@ -620,4 +680,293 @@ abstract class UpdateProfileError<T> implements ProfileState<T> {
   @JsonKey(ignore: true)
   _$$UpdateProfileErrorImplCopyWith<T, _$UpdateProfileErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LogoutSuccessImplCopyWith<T, $Res> {
+  factory _$$LogoutSuccessImplCopyWith(_$LogoutSuccessImpl<T> value,
+          $Res Function(_$LogoutSuccessImpl<T>) then) =
+      __$$LogoutSuccessImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LogoutSuccessImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$LogoutSuccessImpl<T>>
+    implements _$$LogoutSuccessImplCopyWith<T, $Res> {
+  __$$LogoutSuccessImplCopyWithImpl(_$LogoutSuccessImpl<T> _value,
+      $Res Function(_$LogoutSuccessImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LogoutSuccessImpl<T> implements LogoutSuccess<T> {
+  const _$LogoutSuccessImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.logoutSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LogoutSuccessImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateProfileloading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
+  }) {
+    return logoutSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateProfileloading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
+  }) {
+    return logoutSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateProfileloading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutSuccess != null) {
+      return logoutSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(UpdateProfileloading<T> value)
+        updateProfileloading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
+  }) {
+    return logoutSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
+  }) {
+    return logoutSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutSuccess != null) {
+      return logoutSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LogoutSuccess<T> implements ProfileState<T> {
+  const factory LogoutSuccess() = _$LogoutSuccessImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$LogoutErrorImplCopyWith<T, $Res> {
+  factory _$$LogoutErrorImplCopyWith(_$LogoutErrorImpl<T> value,
+          $Res Function(_$LogoutErrorImpl<T>) then) =
+      __$$LogoutErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$LogoutErrorImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$LogoutErrorImpl<T>>
+    implements _$$LogoutErrorImplCopyWith<T, $Res> {
+  __$$LogoutErrorImplCopyWithImpl(
+      _$LogoutErrorImpl<T> _value, $Res Function(_$LogoutErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$LogoutErrorImpl<T>(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LogoutErrorImpl<T> implements LogoutError<T> {
+  const _$LogoutErrorImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.logoutError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LogoutErrorImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LogoutErrorImplCopyWith<T, _$LogoutErrorImpl<T>> get copyWith =>
+      __$$LogoutErrorImplCopyWithImpl<T, _$LogoutErrorImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() updateProfileloading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String message) updateProfileError,
+    required TResult Function() logoutSuccess,
+    required TResult Function(String message) logoutError,
+  }) {
+    return logoutError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? updateProfileloading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String message)? updateProfileError,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(String message)? logoutError,
+  }) {
+    return logoutError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? updateProfileloading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String message)? updateProfileError,
+    TResult Function()? logoutSuccess,
+    TResult Function(String message)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutError != null) {
+      return logoutError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(UpdateProfileloading<T> value)
+        updateProfileloading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileError<T> value) updateProfileError,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
+  }) {
+    return logoutError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(UpdateProfileloading<T> value)? updateProfileloading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
+  }) {
+    return logoutError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(UpdateProfileloading<T> value)? updateProfileloading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileError<T> value)? updateProfileError,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutError != null) {
+      return logoutError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LogoutError<T> implements ProfileState<T> {
+  const factory LogoutError({required final String message}) =
+      _$LogoutErrorImpl<T>;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$LogoutErrorImplCopyWith<T, _$LogoutErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

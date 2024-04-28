@@ -1,8 +1,9 @@
 class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
   static const String testingBaseUrl =
-      'https://4de6-196-129-113-100.ngrok-free.app//api/';
+      'https://7311-196-129-185-14.ngrok-free.app//api/';
   static const String login = 'account/login';
+  static const String logout = 'account/logout';
   static const String register = 'account/register';
   static const String uploadImage = 'UploadImage/uploadfile';
   static const String updateUserProfile = 'account';

@@ -18,6 +18,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/course_attendance/ui/course_attendance_screen.dart';
 import '../../features/help/ui/help_screen.dart';
 import '../../features/home/ui/home_screen.dart';
+import '../../features/profile/logic/cubit/profile_cubit.dart';
 import '../../features/profile/ui/profile_screen.dart';
 import '../../features/register/logic/cubit/register_cubit.dart';
 
@@ -64,7 +65,10 @@ class AppRouter {
         );
       case Routes.profileScreen:
         return MaterialPageRoute(
-          builder: (_) => const ProfileScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: const ProfileScreen(),
+          ),
         );
       case Routes.helpScreen:
         return MaterialPageRoute(

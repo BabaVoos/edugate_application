@@ -36,7 +36,7 @@ Future<void> setupGetIt() async {
 
   // Profile
   getIt.registerFactory<UpdateProfileRepo>(() => UpdateProfileRepo(getIt<ApiService>()));
-  getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<UpdateProfileRepo>()));
+  getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<UpdateProfileRepo>(), getIt<ApiService>()));
 
   // Home
   getIt.registerLazySingleton<GetCoursesRepo>(() => GetCoursesRepo(getIt<ApiService>()));

@@ -1,3 +1,4 @@
+import 'package:edugate_applocation/core/networking/api_service.dart';
 import 'package:edugate_applocation/core/networking/cache_helper.dart';
 import 'package:edugate_applocation/features/profile/data/models/update_profile_body.dart';
 import 'package:edugate_applocation/features/profile/data/repos/update_profile_repo.dart';
@@ -7,8 +8,10 @@ import 'profile_state.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {
   final UpdateProfileRepo _updateProfileRepo;
+  final ApiService _apiService;
 
-  ProfileCubit(this._updateProfileRepo) : super(const ProfileState.initial());
+  ProfileCubit(this._updateProfileRepo, this._apiService)
+      : super(const ProfileState.initial());
 
   // putting text controllers here for easy access and for reducing loads on UI
   TextEditingController mailController = TextEditingController();
@@ -78,5 +81,19 @@ class ProfileCubit extends Cubit<ProfileState> {
     CacheHelper.saveData(key: 'email', value: userData.email);
     CacheHelper.saveData(key: 'displayName', value: userData.displayName);
     CacheHelper.saveData(key: 'phoneNumber', value: userData.phoneNumber);
+  }
+
+  void emitLogoutStates() async {
+    try {
+      _apiService.logout().then((value) async {
+        await CacheHelper.clearData();
+        emit(const ProfileState.logoutSuccess(
+          
+        ));
+      });
+    } catch (e) {
+      print(e);
+      emit(ProfileState.logoutError(message: e.toString()));
+    }
   }
 }
