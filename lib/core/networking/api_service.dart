@@ -22,6 +22,9 @@ abstract class ApiService {
     @Body() LoginRequestBody loginRequestBody,
   );
 
+  @POST(ApiConstants.logout)
+  Future<String> logout();
+  
   @POST(ApiConstants.register)
   Future<RegisterResponse> register(
     @Body() RegisterRequestBody registerRequestBody,

@@ -27,6 +27,7 @@ class ProfileScreen extends StatelessWidget {
             saveChangesOnTap: () {
               validateThenUpdate(context);
             },
+            
           ),
           const ProfileBlocListener(),
         ],
