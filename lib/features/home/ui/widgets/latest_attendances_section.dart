@@ -1,8 +1,10 @@
+import 'package:edugate_applocation/core/helpers/extinsions.dart';
+import 'package:edugate_applocation/core/routing/router.dart';
 import 'package:flutter/material.dart';
 import 'package:icon_broken/icon_broken.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors.dart';
-import 'attendance_container.dart';
+import '../../../../core/widgets/attendance_container.dart';
 import 'section_header.dart';
 
 class LatestAttendancesSection extends StatelessWidget {
@@ -18,7 +20,9 @@ class LatestAttendancesSection extends StatelessWidget {
           sectionTitle: 'Latest Attendances',
           icon: IconBroken.Calendar,
           traillingWidget: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.attendanceHistoryScreen);
+            },
             icon: const Icon(
               IconBroken.Arrow___Right_3,
               color: ColorsManager.blueColor,
