@@ -1,17 +1,18 @@
+import 'package:edugate_applocation/core/helpers/date_format_helper.dart';
 import 'package:edugate_applocation/core/theming/colors.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../helpers/spacing.dart';
+
 class DateTimeWidget extends StatelessWidget {
   const DateTimeWidget({
     super.key,
-    required this.date,
-    required this.time,
+    required this.dateTimeString,
   });
 
-  final String date;
-  final String time;
+  final String dateTimeString;
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +26,13 @@ class DateTimeWidget extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            date,
+            DateTimeHelper.parseDateTime(dateTimeString)[0] ?? '',
             style: TextStyles.font14BlackMedium
                 .copyWith(color: ColorsManager.blueColor),
           ),
+          verticalSpacing(5),
           Text(
-            time,
+            DateTimeHelper.parseDateTime(dateTimeString)[1] ?? '',
             style: TextStyles.font14BlackMedium
                 .copyWith(color: ColorsManager.blueColor),
           ),

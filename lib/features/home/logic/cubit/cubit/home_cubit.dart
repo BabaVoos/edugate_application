@@ -1,5 +1,7 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
 import 'package:edugate_applocation/core/helpers/location_helper.dart';
+import 'package:edugate_applocation/features/attendance_history/data/models/get_attendance_history_response.dart';
+import 'package:edugate_applocation/features/attendance_history/data/repos/get_attendance_history_repo.dart';
 import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
 import 'package:edugate_applocation/features/home/data/reops/get_courses_repo.dart';
 import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_state.dart';
@@ -14,7 +16,9 @@ import '../../../data/models/qr_code_data_model.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final GetCoursesRepo _getCoursesRepo;
-  HomeCubit(this._getCoursesRepo) : super(const HomeState.initial());
+  final GetAttendanceHistoryRepo _getAttendanceHistoryRepo;
+  HomeCubit(this._getCoursesRepo, this._getAttendanceHistoryRepo)
+      : super(const HomeState.initial());
 
   final _qrBarCodeScannerDialogPlugin = QrBarCodeScannerDialog();
 
@@ -88,7 +92,7 @@ class HomeCubit extends Cubit<HomeState> {
   List<GetCoursesResponse> courses = [];
   List<GetCoursesResponse> emitGetCoursesState() {
     emit(const HomeState.getCoursesLoading());
-    final response = _getCoursesRepo.getCourses().then((value) {
+    _getCoursesRepo.getCourses().then((value) {
       value.when(
         success: (getCoursesRepsonse) {
           courses = getCoursesRepsonse;
@@ -100,5 +104,24 @@ class HomeCubit extends Cubit<HomeState> {
       );
     });
     return courses;
+  }
+
+  List<GetAttendanceHistoryResponse> attendanceHistory = [];
+  Future<List<GetAttendanceHistoryResponse>>
+      emitGetAttendanceHistoryState() async {
+    emit(const HomeState.getAttendanceHistoryLoading());
+    final response = await _getAttendanceHistoryRepo.getAttendanceHistory();
+    response.when(
+      success: (reponse) {
+        attendanceHistory = reponse;
+        emit(
+          GetAttendanceHistorySuccess(reponse),
+        );
+      },
+      failure: (failure) => HomeState.getAttendanceHistoryFailed(
+        message: failure.apiErrorModel.errorMessage ?? '',
+      ),
+    );
+    return attendanceHistory;
   }
 }

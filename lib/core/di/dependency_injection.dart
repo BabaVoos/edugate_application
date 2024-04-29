@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:edugate_applocation/core/networking/api_service.dart';
 import 'package:edugate_applocation/core/networking/dio_factory.dart';
+import 'package:edugate_applocation/features/attendance_history/data/repos/get_attendance_history_repo.dart';
 import 'package:edugate_applocation/features/course_attendance/data/repos/get_course_attendance_repo.dart';
 import 'package:edugate_applocation/features/course_attendance/logic/cubit/course_attendance_cubit.dart';
 import 'package:edugate_applocation/features/home/logic/cubit/cubit/home_cubit.dart';
@@ -40,7 +41,8 @@ Future<void> setupGetIt() async {
 
   // Home
   getIt.registerLazySingleton<GetCoursesRepo>(() => GetCoursesRepo(getIt<ApiService>()));
-  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt<GetCoursesRepo>()));
+  getIt.registerLazySingleton<GetAttendanceHistoryRepo>(() => GetAttendanceHistoryRepo(getIt<ApiService>()));
+  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt<GetCoursesRepo>(), getIt<GetAttendanceHistoryRepo>()));
 
   // Course Attendance
     getIt.registerLazySingleton<GetCourseAttendanceRepo>(() => GetCourseAttendanceRepo(getIt<ApiService>()));

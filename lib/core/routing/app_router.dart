@@ -15,6 +15,7 @@ import 'package:edugate_applocation/features/register/ui/register_screen.dart';
 import 'package:edugate_applocation/features/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/attendance_history/data/models/get_attendance_history_response.dart';
 import '../../features/attendance_history/ui/attendance_history_screen.dart';
 import '../../features/course_attendance/ui/course_attendance_screen.dart';
 import '../../features/help/ui/help_screen.dart';
@@ -92,7 +93,9 @@ class AppRouter {
         );
       case Routes.attendanceHistoryScreen:
         return MaterialPageRoute(
-          builder: (_) => const AttendanceHistoryScreen(),
+          builder: (_) =>  AttendanceHistoryScreen(
+            attendanceHistory: arguments as List<GetAttendanceHistoryResponse>,
+          ),
         );
       default:
         return MaterialPageRoute(

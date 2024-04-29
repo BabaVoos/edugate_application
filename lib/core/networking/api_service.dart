@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:edugate_applocation/core/networking/api_constants.dart';
+import 'package:edugate_applocation/features/attendance_history/data/models/get_attendance_history_response.dart';
 import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
 import 'package:edugate_applocation/features/login/data/models/login_request_body.dart';
 import 'package:edugate_applocation/features/login/data/models/login_response.dart';
@@ -44,5 +45,10 @@ abstract class ApiService {
   @GET(ApiConstants.getCourseAttendance)
   Future<List<GetCourseAttendanceResponse>> getCourseAttendance(
     @Body() GetCourseAttendanceRequestBody getCourseAttendanceRequestBody,
+  );
+
+  @GET(ApiConstants.getAttendanceHistory)
+  Future<List<GetAttendanceHistoryResponse>> getAttendanceHistory(
+    @Query("studentId") String studentId,
   );
 }
