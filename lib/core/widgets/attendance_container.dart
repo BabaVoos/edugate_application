@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:icon_broken/icon_broken.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/styles.dart';
+import '../helpers/spacing.dart';
+import '../theming/colors.dart';
+import '../theming/styles.dart';
+import 'date_time_widget.dart';
 
 class AttendanceWidget extends StatelessWidget {
   const AttendanceWidget({
@@ -48,23 +48,28 @@ class AttendanceWidget extends StatelessWidget {
             ),
           ),
           horizontalSpacing(10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Data Structure',
-                style: TextStyles.font20BlueSemiBold,
-              ),
-              Text(
-                'Week 5',
-                style: TextStyles.font16GreyMedium,
-              )
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Data Structure',
+                  style: TextStyles.font20BlueSemiBold,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                verticalSpacing(5),
+                Text(
+                  'Week 5',
+                  style: TextStyles.font16GreyMedium,
+                )
+              ],
+            ),
           ),
-          const Spacer(),
-          Icon(
-            IconBroken.Shield_Done,
-            color: Colors.green[700],
+          horizontalSpacing(10),
+          const DateTimeWidget(
+            date: '29 Apr',
+            time: '3:30 PM',
           ),
         ],
       ),
