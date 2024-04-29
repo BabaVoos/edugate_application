@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://7311-196-129-185-14.ngrok-free.app//api/';
+    baseUrl ??= 'https://b540-196-129-170-82.ngrok-free.app//api/';
   }
 
   final Dio _dio;
@@ -193,6 +193,37 @@ class _ApiService implements ApiService {
     var value = _result.data!
         .map((dynamic i) =>
             GetCourseAttendanceResponse.fromJson(i as Map<String, dynamic>))
+        .toList();
+    return value;
+  }
+
+  @override
+  Future<List<GetAttendanceHistoryResponse>> getAttendanceHistory(
+      String studentId) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'studentId': studentId};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<GetAttendanceHistoryResponse>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'Attendance/history',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var value = _result.data!
+        .map((dynamic i) =>
+            GetAttendanceHistoryResponse.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }

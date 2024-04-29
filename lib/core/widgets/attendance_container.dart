@@ -1,3 +1,4 @@
+import 'package:edugate_applocation/features/attendance_history/data/models/get_attendance_history_response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../helpers/spacing.dart';
@@ -8,7 +9,10 @@ import 'date_time_widget.dart';
 class AttendanceWidget extends StatelessWidget {
   const AttendanceWidget({
     super.key,
+    required this.attendance,
   });
+
+  final GetAttendanceHistoryResponse attendance;
 
   @override
   Widget build(BuildContext context) {
@@ -53,23 +57,22 @@ class AttendanceWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Data Structure',
+                  attendance.attendanceRecords![0].courseName ?? 'Course Name',
                   style: TextStyles.font20BlueSemiBold,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
                 verticalSpacing(5),
                 Text(
-                  'Week 5',
+                  'Week ${attendance.attendanceRecords![0].lectureNumber ?? '1'}',
                   style: TextStyles.font16GreyMedium,
                 )
               ],
             ),
           ),
           horizontalSpacing(10),
-          const DateTimeWidget(
-            date: '29 Apr',
-            time: '3:30 PM',
+          DateTimeWidget(
+            dateTimeString: attendance.date ?? '',
           ),
         ],
       ),

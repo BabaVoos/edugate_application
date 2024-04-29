@@ -12,4 +12,8 @@ class HomeState<T> with _$HomeState<T> {
   const factory HomeState.getCoursesLoading() = GetCoursesLoading;
   const factory HomeState.getCoursesSuccess(T data) = GetCoursesSuccess<T>;
   const factory HomeState.getCoursesFailed({required String message}) = GetCoursesFailed;
+
+  const factory HomeState.getAttendanceHistoryLoading() = GetAttendanceHistoryLoading;
+  const factory HomeState.getAttendanceHistorySuccess(T data) = GetAttendanceHistorySuccess<T>;
+  const factory HomeState.getAttendanceHistoryFailed({required String message}) = GetAttendanceHistoryFailed;
 }

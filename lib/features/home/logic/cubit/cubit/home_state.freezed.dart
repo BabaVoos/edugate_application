@@ -25,6 +25,9 @@ mixin _$HomeState<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$HomeState<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$HomeState<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +68,12 @@ mixin _$HomeState<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +85,12 @@ mixin _$HomeState<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +102,12 @@ mixin _$HomeState<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -149,6 +176,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return initial();
   }
@@ -163,6 +193,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return initial?.call();
   }
@@ -177,6 +210,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -195,6 +231,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return initial(this);
   }
@@ -209,6 +251,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return initial?.call(this);
   }
@@ -223,6 +271,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -282,6 +336,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return getLocationLoading();
   }
@@ -296,6 +353,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return getLocationLoading?.call();
   }
@@ -310,6 +370,9 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getLocationLoading != null) {
@@ -328,6 +391,12 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return getLocationLoading(this);
   }
@@ -342,6 +411,12 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return getLocationLoading?.call(this);
   }
@@ -356,6 +431,12 @@ class _$GetLocationLoadingImpl<T> implements GetLocationLoading<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getLocationLoading != null) {
@@ -442,6 +523,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return getLocationSuccess(data);
   }
@@ -456,6 +540,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return getLocationSuccess?.call(data);
   }
@@ -470,6 +557,9 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getLocationSuccess != null) {
@@ -488,6 +578,12 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return getLocationSuccess(this);
   }
@@ -502,6 +598,12 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return getLocationSuccess?.call(this);
   }
@@ -516,6 +618,12 @@ class _$GetLocationSuccessImpl<T> implements GetLocationSuccess<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getLocationSuccess != null) {
@@ -607,6 +715,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return getLocationFailed(message);
   }
@@ -621,6 +732,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return getLocationFailed?.call(message);
   }
@@ -635,6 +749,9 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getLocationFailed != null) {
@@ -653,6 +770,12 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return getLocationFailed(this);
   }
@@ -667,6 +790,12 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return getLocationFailed?.call(this);
   }
@@ -681,6 +810,12 @@ class _$GetLocationFailedImpl<T> implements GetLocationFailed<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getLocationFailed != null) {
@@ -746,6 +881,9 @@ class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return getCoursesLoading();
   }
@@ -760,6 +898,9 @@ class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return getCoursesLoading?.call();
   }
@@ -774,6 +915,9 @@ class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getCoursesLoading != null) {
@@ -792,6 +936,12 @@ class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return getCoursesLoading(this);
   }
@@ -806,6 +956,12 @@ class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return getCoursesLoading?.call(this);
   }
@@ -820,6 +976,12 @@ class _$GetCoursesLoadingImpl<T> implements GetCoursesLoading<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getCoursesLoading != null) {
@@ -907,6 +1069,9 @@ class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return getCoursesSuccess(data);
   }
@@ -921,6 +1086,9 @@ class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return getCoursesSuccess?.call(data);
   }
@@ -935,6 +1103,9 @@ class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getCoursesSuccess != null) {
@@ -953,6 +1124,12 @@ class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return getCoursesSuccess(this);
   }
@@ -967,6 +1144,12 @@ class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return getCoursesSuccess?.call(this);
   }
@@ -981,6 +1164,12 @@ class _$GetCoursesSuccessImpl<T> implements GetCoursesSuccess<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getCoursesSuccess != null) {
@@ -1071,6 +1260,9 @@ class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
     required TResult Function() getCoursesLoading,
     required TResult Function(T data) getCoursesSuccess,
     required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
   }) {
     return getCoursesFailed(message);
   }
@@ -1085,6 +1277,9 @@ class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
     TResult? Function()? getCoursesLoading,
     TResult? Function(T data)? getCoursesSuccess,
     TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
   }) {
     return getCoursesFailed?.call(message);
   }
@@ -1099,6 +1294,9 @@ class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
     TResult Function()? getCoursesLoading,
     TResult Function(T data)? getCoursesSuccess,
     TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getCoursesFailed != null) {
@@ -1117,6 +1315,12 @@ class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
     required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
     required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
     required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
   }) {
     return getCoursesFailed(this);
   }
@@ -1131,6 +1335,12 @@ class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
     TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
   }) {
     return getCoursesFailed?.call(this);
   }
@@ -1145,6 +1355,12 @@ class _$GetCoursesFailedImpl<T> implements GetCoursesFailed<T> {
     TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
     TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
     TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
     required TResult orElse(),
   }) {
     if (getCoursesFailed != null) {
@@ -1162,4 +1378,566 @@ abstract class GetCoursesFailed<T> implements HomeState<T> {
   @JsonKey(ignore: true)
   _$$GetCoursesFailedImplCopyWith<T, _$GetCoursesFailedImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetAttendanceHistoryLoadingImplCopyWith<T, $Res> {
+  factory _$$GetAttendanceHistoryLoadingImplCopyWith(
+          _$GetAttendanceHistoryLoadingImpl<T> value,
+          $Res Function(_$GetAttendanceHistoryLoadingImpl<T>) then) =
+      __$$GetAttendanceHistoryLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetAttendanceHistoryLoadingImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res,
+        _$GetAttendanceHistoryLoadingImpl<T>>
+    implements _$$GetAttendanceHistoryLoadingImplCopyWith<T, $Res> {
+  __$$GetAttendanceHistoryLoadingImplCopyWithImpl(
+      _$GetAttendanceHistoryLoadingImpl<T> _value,
+      $Res Function(_$GetAttendanceHistoryLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetAttendanceHistoryLoadingImpl<T>
+    implements GetAttendanceHistoryLoading<T> {
+  const _$GetAttendanceHistoryLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getAttendanceHistoryLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAttendanceHistoryLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getLocationLoading,
+    required TResult Function(T data) getLocationSuccess,
+    required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getLocationLoading,
+    TResult? Function(T data)? getLocationSuccess,
+    TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getLocationLoading,
+    TResult Function(T data)? getLocationSuccess,
+    TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
+    required TResult orElse(),
+  }) {
+    if (getAttendanceHistoryLoading != null) {
+      return getAttendanceHistoryLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetLocationLoading<T> value) getLocationLoading,
+    required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
+    required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
+    required TResult orElse(),
+  }) {
+    if (getAttendanceHistoryLoading != null) {
+      return getAttendanceHistoryLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetAttendanceHistoryLoading<T> implements HomeState<T> {
+  const factory GetAttendanceHistoryLoading() =
+      _$GetAttendanceHistoryLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetAttendanceHistorySuccessImplCopyWith<T, $Res> {
+  factory _$$GetAttendanceHistorySuccessImplCopyWith(
+          _$GetAttendanceHistorySuccessImpl<T> value,
+          $Res Function(_$GetAttendanceHistorySuccessImpl<T>) then) =
+      __$$GetAttendanceHistorySuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$GetAttendanceHistorySuccessImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res,
+        _$GetAttendanceHistorySuccessImpl<T>>
+    implements _$$GetAttendanceHistorySuccessImplCopyWith<T, $Res> {
+  __$$GetAttendanceHistorySuccessImplCopyWithImpl(
+      _$GetAttendanceHistorySuccessImpl<T> _value,
+      $Res Function(_$GetAttendanceHistorySuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetAttendanceHistorySuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetAttendanceHistorySuccessImpl<T>
+    implements GetAttendanceHistorySuccess<T> {
+  const _$GetAttendanceHistorySuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getAttendanceHistorySuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAttendanceHistorySuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAttendanceHistorySuccessImplCopyWith<T,
+          _$GetAttendanceHistorySuccessImpl<T>>
+      get copyWith => __$$GetAttendanceHistorySuccessImplCopyWithImpl<T,
+          _$GetAttendanceHistorySuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getLocationLoading,
+    required TResult Function(T data) getLocationSuccess,
+    required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistorySuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getLocationLoading,
+    TResult? Function(T data)? getLocationSuccess,
+    TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistorySuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getLocationLoading,
+    TResult Function(T data)? getLocationSuccess,
+    TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
+    required TResult orElse(),
+  }) {
+    if (getAttendanceHistorySuccess != null) {
+      return getAttendanceHistorySuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetLocationLoading<T> value) getLocationLoading,
+    required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
+    required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistorySuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistorySuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
+    required TResult orElse(),
+  }) {
+    if (getAttendanceHistorySuccess != null) {
+      return getAttendanceHistorySuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetAttendanceHistorySuccess<T> implements HomeState<T> {
+  const factory GetAttendanceHistorySuccess(final T data) =
+      _$GetAttendanceHistorySuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$GetAttendanceHistorySuccessImplCopyWith<T,
+          _$GetAttendanceHistorySuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetAttendanceHistoryFailedImplCopyWith<T, $Res> {
+  factory _$$GetAttendanceHistoryFailedImplCopyWith(
+          _$GetAttendanceHistoryFailedImpl<T> value,
+          $Res Function(_$GetAttendanceHistoryFailedImpl<T>) then) =
+      __$$GetAttendanceHistoryFailedImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetAttendanceHistoryFailedImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res,
+        _$GetAttendanceHistoryFailedImpl<T>>
+    implements _$$GetAttendanceHistoryFailedImplCopyWith<T, $Res> {
+  __$$GetAttendanceHistoryFailedImplCopyWithImpl(
+      _$GetAttendanceHistoryFailedImpl<T> _value,
+      $Res Function(_$GetAttendanceHistoryFailedImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetAttendanceHistoryFailedImpl<T>(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetAttendanceHistoryFailedImpl<T>
+    implements GetAttendanceHistoryFailed<T> {
+  const _$GetAttendanceHistoryFailedImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getAttendanceHistoryFailed(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAttendanceHistoryFailedImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAttendanceHistoryFailedImplCopyWith<T,
+          _$GetAttendanceHistoryFailedImpl<T>>
+      get copyWith => __$$GetAttendanceHistoryFailedImplCopyWithImpl<T,
+          _$GetAttendanceHistoryFailedImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getLocationLoading,
+    required TResult Function(T data) getLocationSuccess,
+    required TResult Function(String message) getLocationFailed,
+    required TResult Function() getCoursesLoading,
+    required TResult Function(T data) getCoursesSuccess,
+    required TResult Function(String message) getCoursesFailed,
+    required TResult Function() getAttendanceHistoryLoading,
+    required TResult Function(T data) getAttendanceHistorySuccess,
+    required TResult Function(String message) getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryFailed(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getLocationLoading,
+    TResult? Function(T data)? getLocationSuccess,
+    TResult? Function(String message)? getLocationFailed,
+    TResult? Function()? getCoursesLoading,
+    TResult? Function(T data)? getCoursesSuccess,
+    TResult? Function(String message)? getCoursesFailed,
+    TResult? Function()? getAttendanceHistoryLoading,
+    TResult? Function(T data)? getAttendanceHistorySuccess,
+    TResult? Function(String message)? getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryFailed?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getLocationLoading,
+    TResult Function(T data)? getLocationSuccess,
+    TResult Function(String message)? getLocationFailed,
+    TResult Function()? getCoursesLoading,
+    TResult Function(T data)? getCoursesSuccess,
+    TResult Function(String message)? getCoursesFailed,
+    TResult Function()? getAttendanceHistoryLoading,
+    TResult Function(T data)? getAttendanceHistorySuccess,
+    TResult Function(String message)? getAttendanceHistoryFailed,
+    required TResult orElse(),
+  }) {
+    if (getAttendanceHistoryFailed != null) {
+      return getAttendanceHistoryFailed(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(GetLocationLoading<T> value) getLocationLoading,
+    required TResult Function(GetLocationSuccess<T> value) getLocationSuccess,
+    required TResult Function(GetLocationFailed<T> value) getLocationFailed,
+    required TResult Function(GetCoursesLoading<T> value) getCoursesLoading,
+    required TResult Function(GetCoursesSuccess<T> value) getCoursesSuccess,
+    required TResult Function(GetCoursesFailed<T> value) getCoursesFailed,
+    required TResult Function(GetAttendanceHistoryLoading<T> value)
+        getAttendanceHistoryLoading,
+    required TResult Function(GetAttendanceHistorySuccess<T> value)
+        getAttendanceHistorySuccess,
+    required TResult Function(GetAttendanceHistoryFailed<T> value)
+        getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult? Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult? Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult? Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult? Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult? Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult? Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult? Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult? Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
+  }) {
+    return getAttendanceHistoryFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(GetLocationLoading<T> value)? getLocationLoading,
+    TResult Function(GetLocationSuccess<T> value)? getLocationSuccess,
+    TResult Function(GetLocationFailed<T> value)? getLocationFailed,
+    TResult Function(GetCoursesLoading<T> value)? getCoursesLoading,
+    TResult Function(GetCoursesSuccess<T> value)? getCoursesSuccess,
+    TResult Function(GetCoursesFailed<T> value)? getCoursesFailed,
+    TResult Function(GetAttendanceHistoryLoading<T> value)?
+        getAttendanceHistoryLoading,
+    TResult Function(GetAttendanceHistorySuccess<T> value)?
+        getAttendanceHistorySuccess,
+    TResult Function(GetAttendanceHistoryFailed<T> value)?
+        getAttendanceHistoryFailed,
+    required TResult orElse(),
+  }) {
+    if (getAttendanceHistoryFailed != null) {
+      return getAttendanceHistoryFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetAttendanceHistoryFailed<T> implements HomeState<T> {
+  const factory GetAttendanceHistoryFailed({required final String message}) =
+      _$GetAttendanceHistoryFailedImpl<T>;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$GetAttendanceHistoryFailedImplCopyWith<T,
+          _$GetAttendanceHistoryFailedImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
