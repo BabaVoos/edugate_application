@@ -34,7 +34,7 @@ class CheckAttendanceScreen extends StatelessWidget {
                 style: TextStyles.font20BlueSemiBold,
               ),
               Text(
-                'Group : ${qrResult.group}',
+                'Group : ${qrResult.groupName}',
                 style: TextStyles.font20BlueSemiBold,
               ),
               Text(

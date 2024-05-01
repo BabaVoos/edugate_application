@@ -51,7 +51,7 @@ class LocationHelper {
 
       print(
           'lattitude: ${position!.latitude} longitude: ${position!.longitude}');
-          return currentLocation!;
+      return currentLocation!;
     } catch (e) {
       print(e);
       return '';
@@ -70,7 +70,7 @@ class LocationHelper {
           message: 'Please enable your location firstly, then scan again');
     }
 
-    if (distance < 5) {
+    if (distance < 10) {
       return true;
     }
     showMessageToUser(context,
