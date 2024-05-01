@@ -1,4 +1,5 @@
 import 'package:edugate_applocation/core/helpers/extinsions.dart';
+import 'package:edugate_applocation/core/helpers/functions_helper.dart';
 import 'package:edugate_applocation/core/helpers/location_helper.dart';
 import 'package:edugate_applocation/features/attendance_history/data/models/get_attendance_history_response.dart';
 import 'package:edugate_applocation/features/attendance_history/data/repos/get_attendance_history_repo.dart';
@@ -22,15 +23,20 @@ class HomeCubit extends Cubit<HomeState> {
 
   final _qrBarCodeScannerDialogPlugin = QrBarCodeScannerDialog();
 
-  Future<QRCodeDataModel> decodeQrData({required String qrData}) async {
-    List<String> decodedData = qrData.split('- ');
+  List<String>? decodedData = [];
+
+  Future<QRCodeDataModel> decodeQrData(
+      {required String qrData, context}) async {
+    decodedData = FunctionsHelper.base64ToString(qrData, context)!;
     return QRCodeDataModel(
-        courseName: decodedData[0].trim(),
-        group: decodedData[1].trim(),
-        week: decodedData[2].trim(),
-        longitude: double.parse(decodedData[3].trim()),
-        latitude: double.parse(decodedData[4].trim()),
-        time: DateTime.parse(decodedData[5].trim()));
+        courseName: decodedData![0].trim(),
+        courseId: int.parse(decodedData![1].trim()),
+        groupName: decodedData![2].trim(),
+        groupId: int.parse(decodedData![3].trim()),
+        week: int.parse(decodedData![4].trim()),
+        longitude: double.parse(decodedData![5].trim()),
+        latitude: double.parse(decodedData![6].trim()),
+        time: DateTime.parse(decodedData![7].trim()));
   }
 
   void scanQRCode(BuildContext context) {
@@ -39,11 +45,13 @@ class HomeCubit extends Cubit<HomeState> {
       onCode: (code) async {
         await decodeQrData(
           qrData: code!,
+          context: context,
         ).then(
           (value) {
             if (checkTimeBetweenGenerateAndScan(value, context) &&
                 LocationHelper.checkDistance(
-                    value.latitude, value.longitude, context)) {
+                    value.latitude, value.longitude, context) &&
+                decodedData != null) {
               context.pushNamed(
                 Routes.checkAttendanceScreen,
                 arguments: value,
