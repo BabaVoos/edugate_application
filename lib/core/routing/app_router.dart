@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable
 import 'package:edugate_applocation/core/di/dependency_injection.dart';
 import 'package:edugate_applocation/core/routing/router.dart';
+import 'package:edugate_applocation/features/check_attendance/logic/cubit/check_attendance_cubit.dart';
 import 'package:edugate_applocation/features/check_attendance/ui/check_attendance_screen.dart';
 import 'package:edugate_applocation/features/course_attendance/logic/cubit/course_attendance_cubit.dart';
 import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
@@ -87,13 +88,16 @@ class AppRouter {
         );
       case Routes.checkAttendanceScreen:
         return MaterialPageRoute(
-          builder: (_) => CheckAttendanceScreen(
-            qrResult: arguments as QRCodeDataModel,
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<CheckAttendanceCubit>(),
+            child: CheckAttendanceScreen(
+              qrResult: arguments as QRCodeDataModel,
+            ),
           ),
         );
       case Routes.attendanceHistoryScreen:
         return MaterialPageRoute(
-          builder: (_) =>  AttendanceHistoryScreen(
+          builder: (_) => AttendanceHistoryScreen(
             attendanceHistory: arguments as List<GetAttendanceHistoryResponse>,
           ),
         );
