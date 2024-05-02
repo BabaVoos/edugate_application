@@ -10,6 +10,8 @@ class ApiConstants {
   static const String getCourses = 'studentCourseGroup/AppStudentCourse';
   static const String getCourseAttendance = 'attendance/studentAttendance';
   static const String getAttendanceHistory = 'Attendance/history';
+  static const String comapreImages =
+      'https://5cfc-197-53-110-146.ngrok-free.app/predict';
 }
 
 class ApiErrors {
