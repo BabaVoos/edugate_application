@@ -60,7 +60,7 @@ android {
         }
         production {
             dimension "default"
-            resValue "string", "app_name", "Edugate Production"
+            resValue "string", "app_name", "Edugate"
         }
     }
 
