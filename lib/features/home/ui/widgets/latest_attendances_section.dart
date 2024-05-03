@@ -30,6 +30,7 @@ class _LatestAttendancesSectionState extends State<LatestAttendancesSection> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SectionHeader(
           sectionTitle: 'Latest Attendances',

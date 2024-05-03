@@ -17,7 +17,7 @@ class HistoryArrow extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) => current is GetAttendanceHistorySuccess,
       builder: (context, state) {
-        if (state is GetAttendanceHistorySuccess) {
+        if (state is GetAttendanceHistorySuccess && state.data.isNotEmpty) {
           return IconButton(
             onPressed: () {
               context.pushNamed(

@@ -13,14 +13,14 @@ class AttendanceHistoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: 4,
-        itemBuilder: (context, index) {
-          return AttendanceWidget(
-            attendance: attendanceHistory[index],
-          );
-        },
-      );
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      itemCount: attendanceHistory.length > 4 ? 4 : attendanceHistory.length,
+      itemBuilder: (context, index) {
+        return AttendanceWidget(
+          attendance: attendanceHistory[index],
+        );
+      },
+    );
   }
 }
