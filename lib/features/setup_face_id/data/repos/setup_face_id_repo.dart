@@ -5,6 +5,7 @@ import 'package:edugate_applocation/core/networking/api_result.dart';
 import 'package:edugate_applocation/core/networking/api_service.dart';
 import 'package:edugate_applocation/features/setup_face_id/data/models/setup_face_id_response.dart';
 import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/cache_helper.dart';
 
 class SetupFaceIdRepo {
   final ApiService _apiService;
@@ -18,11 +19,12 @@ class SetupFaceIdRepo {
   ) async {
     FormData formData = FormData();
     formData.files.add(
-      MapEntry('formFile', await MultipartFile.fromFile(imagePath)),
+      MapEntry('file', await MultipartFile.fromFile(imagePath)),
     );
     try {
-      final response = await Dio().put(
-        '${ApiConstants.baseUrl}${ApiConstants.uploadImage}',
+      String studentId = CacheHelper.getData(key: 'userName');
+      final response = await Dio().post(
+        '${ApiConstants.testingBaseUrl}${ApiConstants.uploadImage}',
         queryParameters: {
           'studentId': studentId,
         },
@@ -31,7 +33,6 @@ class SetupFaceIdRepo {
           contentType: 'multipart/form-data',
         ),
       );
-      print(response.data);
       return ApiResult.success(SetupFaceIdResponse.fromJson(response.data));
     } catch (error) {
       return ApiResult.failure(ErrorHandler.handle(error));
