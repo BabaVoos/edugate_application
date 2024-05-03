@@ -22,6 +22,9 @@ mixin _$CheckAttendanceState<T> {
     required TResult Function() compareImagesLoading,
     required TResult Function(T data) compareImagesSuccess,
     required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$CheckAttendanceState<T> {
     TResult? Function()? compareImagesLoading,
     TResult? Function(T data)? compareImagesSuccess,
     TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$CheckAttendanceState<T> {
     TResult Function()? compareImagesLoading,
     TResult Function(T data)? compareImagesSuccess,
     TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +58,9 @@ mixin _$CheckAttendanceState<T> {
     required TResult Function(CompareImagesSuccess<T> value)
         compareImagesSuccess,
     required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +69,9 @@ mixin _$CheckAttendanceState<T> {
     TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +80,9 @@ mixin _$CheckAttendanceState<T> {
     TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,6 +149,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() compareImagesLoading,
     required TResult Function(T data) compareImagesSuccess,
     required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
   }) {
     return initial();
   }
@@ -142,6 +163,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? compareImagesLoading,
     TResult? Function(T data)? compareImagesSuccess,
     TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
   }) {
     return initial?.call();
   }
@@ -153,6 +177,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? compareImagesLoading,
     TResult Function(T data)? compareImagesSuccess,
     TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -170,6 +197,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(CompareImagesSuccess<T> value)
         compareImagesSuccess,
     required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
   }) {
     return initial(this);
   }
@@ -181,6 +211,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
   }) {
     return initial?.call(this);
   }
@@ -192,6 +225,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -250,6 +286,9 @@ class _$CompareImagesLoadingImpl<T> implements CompareImagesLoading<T> {
     required TResult Function() compareImagesLoading,
     required TResult Function(T data) compareImagesSuccess,
     required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
   }) {
     return compareImagesLoading();
   }
@@ -261,6 +300,9 @@ class _$CompareImagesLoadingImpl<T> implements CompareImagesLoading<T> {
     TResult? Function()? compareImagesLoading,
     TResult? Function(T data)? compareImagesSuccess,
     TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
   }) {
     return compareImagesLoading?.call();
   }
@@ -272,6 +314,9 @@ class _$CompareImagesLoadingImpl<T> implements CompareImagesLoading<T> {
     TResult Function()? compareImagesLoading,
     TResult Function(T data)? compareImagesSuccess,
     TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
     required TResult orElse(),
   }) {
     if (compareImagesLoading != null) {
@@ -289,6 +334,9 @@ class _$CompareImagesLoadingImpl<T> implements CompareImagesLoading<T> {
     required TResult Function(CompareImagesSuccess<T> value)
         compareImagesSuccess,
     required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
   }) {
     return compareImagesLoading(this);
   }
@@ -300,6 +348,9 @@ class _$CompareImagesLoadingImpl<T> implements CompareImagesLoading<T> {
     TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
   }) {
     return compareImagesLoading?.call(this);
   }
@@ -311,6 +362,9 @@ class _$CompareImagesLoadingImpl<T> implements CompareImagesLoading<T> {
     TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
     required TResult orElse(),
   }) {
     if (compareImagesLoading != null) {
@@ -396,6 +450,9 @@ class _$CompareImagesSuccessImpl<T> implements CompareImagesSuccess<T> {
     required TResult Function() compareImagesLoading,
     required TResult Function(T data) compareImagesSuccess,
     required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
   }) {
     return compareImagesSuccess(data);
   }
@@ -407,6 +464,9 @@ class _$CompareImagesSuccessImpl<T> implements CompareImagesSuccess<T> {
     TResult? Function()? compareImagesLoading,
     TResult? Function(T data)? compareImagesSuccess,
     TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
   }) {
     return compareImagesSuccess?.call(data);
   }
@@ -418,6 +478,9 @@ class _$CompareImagesSuccessImpl<T> implements CompareImagesSuccess<T> {
     TResult Function()? compareImagesLoading,
     TResult Function(T data)? compareImagesSuccess,
     TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
     required TResult orElse(),
   }) {
     if (compareImagesSuccess != null) {
@@ -435,6 +498,9 @@ class _$CompareImagesSuccessImpl<T> implements CompareImagesSuccess<T> {
     required TResult Function(CompareImagesSuccess<T> value)
         compareImagesSuccess,
     required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
   }) {
     return compareImagesSuccess(this);
   }
@@ -446,6 +512,9 @@ class _$CompareImagesSuccessImpl<T> implements CompareImagesSuccess<T> {
     TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
   }) {
     return compareImagesSuccess?.call(this);
   }
@@ -457,6 +526,9 @@ class _$CompareImagesSuccessImpl<T> implements CompareImagesSuccess<T> {
     TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
     required TResult orElse(),
   }) {
     if (compareImagesSuccess != null) {
@@ -546,6 +618,9 @@ class _$CompareImagesErrorImpl<T> implements CompareImagesError<T> {
     required TResult Function() compareImagesLoading,
     required TResult Function(T data) compareImagesSuccess,
     required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
   }) {
     return compareImagesError(message);
   }
@@ -557,6 +632,9 @@ class _$CompareImagesErrorImpl<T> implements CompareImagesError<T> {
     TResult? Function()? compareImagesLoading,
     TResult? Function(T data)? compareImagesSuccess,
     TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
   }) {
     return compareImagesError?.call(message);
   }
@@ -568,6 +646,9 @@ class _$CompareImagesErrorImpl<T> implements CompareImagesError<T> {
     TResult Function()? compareImagesLoading,
     TResult Function(T data)? compareImagesSuccess,
     TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
     required TResult orElse(),
   }) {
     if (compareImagesError != null) {
@@ -585,6 +666,9 @@ class _$CompareImagesErrorImpl<T> implements CompareImagesError<T> {
     required TResult Function(CompareImagesSuccess<T> value)
         compareImagesSuccess,
     required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
   }) {
     return compareImagesError(this);
   }
@@ -596,6 +680,9 @@ class _$CompareImagesErrorImpl<T> implements CompareImagesError<T> {
     TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
   }) {
     return compareImagesError?.call(this);
   }
@@ -607,6 +694,9 @@ class _$CompareImagesErrorImpl<T> implements CompareImagesError<T> {
     TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
     TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
     TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
     required TResult orElse(),
   }) {
     if (compareImagesError != null) {
@@ -624,4 +714,473 @@ abstract class CompareImagesError<T> implements CheckAttendanceState<T> {
   @JsonKey(ignore: true)
   _$$CompareImagesErrorImplCopyWith<T, _$CompareImagesErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetImageLoadingImplCopyWith<T, $Res> {
+  factory _$$GetImageLoadingImplCopyWith(_$GetImageLoadingImpl<T> value,
+          $Res Function(_$GetImageLoadingImpl<T>) then) =
+      __$$GetImageLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetImageLoadingImplCopyWithImpl<T, $Res>
+    extends _$CheckAttendanceStateCopyWithImpl<T, $Res,
+        _$GetImageLoadingImpl<T>>
+    implements _$$GetImageLoadingImplCopyWith<T, $Res> {
+  __$$GetImageLoadingImplCopyWithImpl(_$GetImageLoadingImpl<T> _value,
+      $Res Function(_$GetImageLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetImageLoadingImpl<T> implements GetImageLoading<T> {
+  const _$GetImageLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CheckAttendanceState<$T>.getImageLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetImageLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() compareImagesLoading,
+    required TResult Function(T data) compareImagesSuccess,
+    required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
+  }) {
+    return getImageLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? compareImagesLoading,
+    TResult? Function(T data)? compareImagesSuccess,
+    TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
+  }) {
+    return getImageLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? compareImagesLoading,
+    TResult Function(T data)? compareImagesSuccess,
+    TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
+    required TResult orElse(),
+  }) {
+    if (getImageLoading != null) {
+      return getImageLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(CompareImagesLoading<T> value)
+        compareImagesLoading,
+    required TResult Function(CompareImagesSuccess<T> value)
+        compareImagesSuccess,
+    required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
+  }) {
+    return getImageLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
+    TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
+    TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
+  }) {
+    return getImageLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
+    TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
+    TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
+    required TResult orElse(),
+  }) {
+    if (getImageLoading != null) {
+      return getImageLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetImageLoading<T> implements CheckAttendanceState<T> {
+  const factory GetImageLoading() = _$GetImageLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetImageSuccessImplCopyWith<T, $Res> {
+  factory _$$GetImageSuccessImplCopyWith(_$GetImageSuccessImpl<T> value,
+          $Res Function(_$GetImageSuccessImpl<T>) then) =
+      __$$GetImageSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$GetImageSuccessImplCopyWithImpl<T, $Res>
+    extends _$CheckAttendanceStateCopyWithImpl<T, $Res,
+        _$GetImageSuccessImpl<T>>
+    implements _$$GetImageSuccessImplCopyWith<T, $Res> {
+  __$$GetImageSuccessImplCopyWithImpl(_$GetImageSuccessImpl<T> _value,
+      $Res Function(_$GetImageSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetImageSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetImageSuccessImpl<T> implements GetImageSuccess<T> {
+  const _$GetImageSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'CheckAttendanceState<$T>.getImageSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetImageSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetImageSuccessImplCopyWith<T, _$GetImageSuccessImpl<T>> get copyWith =>
+      __$$GetImageSuccessImplCopyWithImpl<T, _$GetImageSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() compareImagesLoading,
+    required TResult Function(T data) compareImagesSuccess,
+    required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
+  }) {
+    return getImageSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? compareImagesLoading,
+    TResult? Function(T data)? compareImagesSuccess,
+    TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
+  }) {
+    return getImageSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? compareImagesLoading,
+    TResult Function(T data)? compareImagesSuccess,
+    TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
+    required TResult orElse(),
+  }) {
+    if (getImageSuccess != null) {
+      return getImageSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(CompareImagesLoading<T> value)
+        compareImagesLoading,
+    required TResult Function(CompareImagesSuccess<T> value)
+        compareImagesSuccess,
+    required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
+  }) {
+    return getImageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
+    TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
+    TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
+  }) {
+    return getImageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
+    TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
+    TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
+    required TResult orElse(),
+  }) {
+    if (getImageSuccess != null) {
+      return getImageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetImageSuccess<T> implements CheckAttendanceState<T> {
+  const factory GetImageSuccess(final T data) = _$GetImageSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$GetImageSuccessImplCopyWith<T, _$GetImageSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetImageErrorImplCopyWith<T, $Res> {
+  factory _$$GetImageErrorImplCopyWith(_$GetImageErrorImpl<T> value,
+          $Res Function(_$GetImageErrorImpl<T>) then) =
+      __$$GetImageErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetImageErrorImplCopyWithImpl<T, $Res>
+    extends _$CheckAttendanceStateCopyWithImpl<T, $Res, _$GetImageErrorImpl<T>>
+    implements _$$GetImageErrorImplCopyWith<T, $Res> {
+  __$$GetImageErrorImplCopyWithImpl(_$GetImageErrorImpl<T> _value,
+      $Res Function(_$GetImageErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetImageErrorImpl<T>(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetImageErrorImpl<T> implements GetImageError<T> {
+  const _$GetImageErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CheckAttendanceState<$T>.getImageError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetImageErrorImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetImageErrorImplCopyWith<T, _$GetImageErrorImpl<T>> get copyWith =>
+      __$$GetImageErrorImplCopyWithImpl<T, _$GetImageErrorImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() compareImagesLoading,
+    required TResult Function(T data) compareImagesSuccess,
+    required TResult Function(String message) compareImagesError,
+    required TResult Function() getImageLoading,
+    required TResult Function(T data) getImageSuccess,
+    required TResult Function(String message) getImageError,
+  }) {
+    return getImageError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? compareImagesLoading,
+    TResult? Function(T data)? compareImagesSuccess,
+    TResult? Function(String message)? compareImagesError,
+    TResult? Function()? getImageLoading,
+    TResult? Function(T data)? getImageSuccess,
+    TResult? Function(String message)? getImageError,
+  }) {
+    return getImageError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? compareImagesLoading,
+    TResult Function(T data)? compareImagesSuccess,
+    TResult Function(String message)? compareImagesError,
+    TResult Function()? getImageLoading,
+    TResult Function(T data)? getImageSuccess,
+    TResult Function(String message)? getImageError,
+    required TResult orElse(),
+  }) {
+    if (getImageError != null) {
+      return getImageError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(CompareImagesLoading<T> value)
+        compareImagesLoading,
+    required TResult Function(CompareImagesSuccess<T> value)
+        compareImagesSuccess,
+    required TResult Function(CompareImagesError<T> value) compareImagesError,
+    required TResult Function(GetImageLoading<T> value) getImageLoading,
+    required TResult Function(GetImageSuccess<T> value) getImageSuccess,
+    required TResult Function(GetImageError<T> value) getImageError,
+  }) {
+    return getImageError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(CompareImagesLoading<T> value)? compareImagesLoading,
+    TResult? Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
+    TResult? Function(CompareImagesError<T> value)? compareImagesError,
+    TResult? Function(GetImageLoading<T> value)? getImageLoading,
+    TResult? Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult? Function(GetImageError<T> value)? getImageError,
+  }) {
+    return getImageError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(CompareImagesLoading<T> value)? compareImagesLoading,
+    TResult Function(CompareImagesSuccess<T> value)? compareImagesSuccess,
+    TResult Function(CompareImagesError<T> value)? compareImagesError,
+    TResult Function(GetImageLoading<T> value)? getImageLoading,
+    TResult Function(GetImageSuccess<T> value)? getImageSuccess,
+    TResult Function(GetImageError<T> value)? getImageError,
+    required TResult orElse(),
+  }) {
+    if (getImageError != null) {
+      return getImageError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetImageError<T> implements CheckAttendanceState<T> {
+  const factory GetImageError(final String message) = _$GetImageErrorImpl<T>;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$GetImageErrorImplCopyWith<T, _$GetImageErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

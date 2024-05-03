@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:edugate_applocation/core/networking/api_error_handler.dart';
 import 'package:edugate_applocation/core/networking/api_result.dart';
 import 'package:edugate_applocation/core/networking/api_service.dart';
@@ -16,11 +18,11 @@ class CompareImagesRepo {
   ) async {
     try {
       final response = await _apiService.compareImages(
-        CompareImagesRequestBody(image1: image2, image2: image2),
+        CompareImagesRequestBody(image1: image1, image2: image2),
       );
       return ApiResult.success(response);
     } catch (e) {
-      print('This is repo error $e');
+      log('This is repo error $e');
       return ApiResult.failure(ErrorHandler.handle(e));
     }
   }

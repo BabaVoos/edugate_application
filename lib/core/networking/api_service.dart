@@ -3,6 +3,7 @@ import 'package:edugate_applocation/core/networking/api_constants.dart';
 import 'package:edugate_applocation/features/attendance_history/data/models/get_attendance_history_response.dart';
 import 'package:edugate_applocation/features/check_attendance/data/models/comapre_images_reponse_body.dart';
 import 'package:edugate_applocation/features/check_attendance/data/models/compare_images_request_body.dart';
+import 'package:edugate_applocation/features/check_attendance/data/models/get_image_response_body.dart';
 import 'package:edugate_applocation/features/home/data/models/get_courses_repsonse.dart';
 import 'package:edugate_applocation/features/login/data/models/login_request_body.dart';
 import 'package:edugate_applocation/features/login/data/models/login_response.dart';
@@ -58,5 +59,10 @@ abstract class ApiService {
   )
   Future<CompareImagesResponseBody> compareImages(
     @Body() CompareImagesRequestBody compareImagesRequestBody,
+  );
+
+  @GET(ApiConstants.getImage)
+  Future<GetImageResponse> getImage(
+    @Query("studentId") String studetId,
   );
 }

@@ -23,11 +23,9 @@ class SetupFaceIdScreen extends StatefulWidget {
 class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
   @override
   void initState() {
-    setState(() {});
     super.initState();
   }
 
-  XFile? image;
   final ImagePicker picker = ImagePicker();
 
   @override
@@ -58,7 +56,7 @@ class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
                 buttonTitle: 'Scan my face',
                 backgroundColor: ColorsManager.orangeColor,
                 onTap: () async {
-                  pickImageThenEmit(image);
+                  pickImageThenEmit();
                 },
               ),
               const SetupFaceIdBlocListener(),
@@ -69,13 +67,13 @@ class _SetupFaceIdScreenState extends State<SetupFaceIdScreen> {
     );
   }
 
-  Future<void> pickImageThenEmit(XFile? image) async {
-    image = await picker.pickImage(source: ImageSource.camera).then(
+  Future<void> pickImageThenEmit() async {
+    await picker.pickImage(source: ImageSource.camera).then(
       (value) {
         context.read<SetupFaceIdCubit>().emitSetupFaceIdStates(value!);
-        print(value.path);
-        return null;
       },
-    );
+    ).catchError((e) {
+      print('Mohamed $e');
+    });
   }
 }
