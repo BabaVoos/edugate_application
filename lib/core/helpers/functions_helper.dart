@@ -8,7 +8,7 @@ class FunctionsHelper {
   static List<String>? base64ToString(String base64String, context) {
     String decodedString = utf8.decode(base64.decode(base64String));
     if (AppRegex.isQRCodeDataValid(decodedString) == true) {
-      List<String> decodedData = decodedString.split('- ');
+      List<String> decodedData = decodedString.split(' - ');
       return decodedData;
     } else {
       showMessageToUser(
