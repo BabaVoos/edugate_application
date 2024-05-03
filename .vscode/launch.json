@@ -9,7 +9,7 @@
             "args": ["--flavor", "Development", "--target", "lib/main_development.dart"]
         },
         {
-            "name": "Edugate Production",
+            "name": "Edugate",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_production.dart",
