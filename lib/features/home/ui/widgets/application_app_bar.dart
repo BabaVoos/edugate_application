@@ -37,7 +37,7 @@ AppBar buildApplicationAppBar({required String title}) {
             ),
           )
         : Container(),
-    actions: title == 'Home'
+    actions: title == 'Home' || title == 'Help'
         ? [
             SvgPicture.asset(
               'assets/svgs/blue_container.svg',
