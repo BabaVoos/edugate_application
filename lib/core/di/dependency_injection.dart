@@ -4,6 +4,7 @@ import 'package:edugate_applocation/core/networking/dio_factory.dart';
 import 'package:edugate_applocation/features/attendance_history/data/repos/get_attendance_history_repo.dart';
 import 'package:edugate_applocation/features/check_attendance/data/repos/comapre_images_repo.dart';
 import 'package:edugate_applocation/features/check_attendance/data/repos/get_image_repo.dart';
+import 'package:edugate_applocation/features/check_attendance/data/repos/take_attendance_repo.dart';
 import 'package:edugate_applocation/features/check_attendance/logic/cubit/check_attendance_cubit.dart';
 import 'package:edugate_applocation/features/course_attendance/data/repos/get_course_attendance_repo.dart';
 import 'package:edugate_applocation/features/course_attendance/logic/cubit/course_attendance_cubit.dart';
@@ -65,7 +66,13 @@ Future<void> setupGetIt() async {
   // Check Attendance
   getIt.registerLazySingleton<CompareImagesRepo>(
       () => CompareImagesRepo(getIt<ApiService>()));
-  getIt.registerLazySingleton<GetImageRepo>(() => GetImageRepo(getIt<ApiService>()));
-  getIt.registerFactory<CheckAttendanceCubit>(
-      () => CheckAttendanceCubit(getIt<CompareImagesRepo>(), getIt<GetImageRepo>()));
+  getIt.registerLazySingleton<GetImageRepo>(
+      () => GetImageRepo(getIt<ApiService>()));
+  getIt.registerLazySingleton<TakeAttendanceRepo>(() => TakeAttendanceRepo(
+        getIt<ApiService>(),
+      ));
+  getIt.registerFactory<CheckAttendanceCubit>(() => CheckAttendanceCubit(
+      getIt<CompareImagesRepo>(),
+      getIt<GetImageRepo>(),
+      getIt<TakeAttendanceRepo>()));
 }

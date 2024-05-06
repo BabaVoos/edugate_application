@@ -1,5 +1,3 @@
-import 'dart:convert';
-import 'dart:io';
 import 'package:edugate_applocation/core/networking/cache_helper.dart';
 import 'package:edugate_applocation/core/theming/styles.dart';
 import 'package:edugate_applocation/features/check_attendance/logic/cubit/check_attendance_cubit.dart';
@@ -56,32 +54,22 @@ class _CheckAttendanceScreenState extends State<CheckAttendanceScreen> {
               CacheHelper.getData(key: 'image') != '' ||
               CacheHelper.getData(key: 'image') != null) {
             return CheckAttendanceBody(
+              qrRsult: widget.qrResult,
               onTap: () {
-                pickImageThenCommit(picker, context);
+                context
+                    .read<CheckAttendanceCubit>()
+                    .pickImageThenEmitCompareImagesState();
               },
             );
           } else {
             return Center(
                 child: Text(
-              'Something went wrong',
+              'Something went wrong, please try again',
               style: TextStyles.font20BlueSemiBold,
             ));
           }
         },
       ),
     );
-  }
-
-  Future<void> pickImageThenCommit(
-      ImagePicker picker, BuildContext buildContext) async {
-    await picker
-        .pickImage(source: ImageSource.camera, imageQuality: 70)
-        .then((value) {
-      final bytes = File(value!.path).readAsBytesSync();
-      String base64Image = base64Encode(bytes);
-      buildContext
-          .read<CheckAttendanceCubit>()
-          .emitCompareImagesState(base64Image);
-    });
   }
 }
