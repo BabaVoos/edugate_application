@@ -1,7 +1,7 @@
 class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
   static const String testingBaseUrl =
-      'https://3001-196-129-117-228.ngrok-free.app/api/';
+      'https://06af-196-129-112-58.ngrok-free.app/api/';
   static const String login = 'account/login';
   static const String logout = 'account/logout';
   static const String register = 'account/register';
@@ -12,6 +12,7 @@ class ApiConstants {
   static const String getAttendanceHistory = 'Attendance/history';
   static const String getImage = "UploadImage/getimage";
   static const String comapreImages = 'http://192.168.1.109:5000/predict';
+  static const String takeAttendance = "Attendance/takeAttendance";
 }
 
 class ApiErrors {

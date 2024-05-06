@@ -11,4 +11,8 @@ class CheckAttendanceState<T> with _$CheckAttendanceState<T> {
   const factory CheckAttendanceState.getImageLoading() = GetImageLoading;
   const factory CheckAttendanceState.getImageSuccess(T data) = GetImageSuccess;
   const factory CheckAttendanceState.getImageError(String message) = GetImageError;
+
+  const factory CheckAttendanceState.takeAttendanceLodaing() = TakeAttendanceLodaing;
+  const factory CheckAttendanceState.takeAttendanceSuccess(T data) = TakeAttendanceSuccess;
+  const factory CheckAttendanceState.takeAttendanceError(String message) = TakeAttendanceError;
 }
