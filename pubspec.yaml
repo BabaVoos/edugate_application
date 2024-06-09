@@ -18,7 +18,9 @@ dependencies:
   device_preview: ^1.1.0
   # State management
   flutter_bloc: ^8.1.3
+  # Customize Flutter's default white native splash screen with background color and splash image.
   flutter_native_splash: ^2.3.5
+  # A flutter plugin for adapting screen and font size
   flutter_screenutil: ^5.9.0
   # Code generator (mainly used with cubit & retrofit)
   flutter_svg: ^2.0.9
@@ -37,6 +39,26 @@ dependencies:
   pretty_dio_logger: ^1.3.1
   retrofit: ^4.0.3
   retrofit_generator: ^8.0.4
+  # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
+  shared_preferences: ^2.2.2
+  # For Picking images from gallery or camera
+  image_picker: ^1.0.7
+  # A package that helps you add more beautiful icons to your project
+  icon_broken: ^1.1.0
+  # Flutter library to load and cache network images
+  cached_network_image: ^3.3.1
+  #  Saves web files on the storages of the device
+  flutter_cache_manager: ^3.3.1
+  # Render After Effects animations natively on Flutter
+  lottie: ^2.7.0
+  # QR code generator and scanner
+  qr_bar_code_scanner_dialog: ^0.0.5
+  # A Flutter Geocoding plugin which provides easy geocoding and reverse-geocoding features
+  geocoding: ^3.0.0
+  # A Flutter Geolocator plugin which provides access to the location of the device
+  geolocator: ^11.0.0
+  # A package which simplifies the task of updating your Flutter app's launcher icon
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -47,9 +69,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
+    - assets/svgs/
+    - assets/jsons/
 
   # fonts:
   #   - family: Schyler
