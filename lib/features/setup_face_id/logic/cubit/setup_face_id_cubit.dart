@@ -18,9 +18,11 @@ class SetupFaceIdCubit extends Cubit<SetupFaceIdState> {
     );
     response.when(
       success: (setupFaceIdResponse) {
+        CacheHelper.saveData(key: 'image', value: setupFaceIdResponse.imageUrl);
         emit(SetupFaceIdState.setupFaceIdSuccess(setupFaceIdResponse));
       },
       failure: (error) {
+        print('Error From Cubit ${error.apiErrorModel.error}');
         emit(SetupFaceIdState.setupFaceIError(
             message: error.apiErrorModel.errors![0]));
       },

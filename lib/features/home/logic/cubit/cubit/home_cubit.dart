@@ -66,7 +66,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   bool checkTimeBetweenGenerateAndScan(
       QRCodeDataModel value, BuildContext context) {
-    if (DateTime.now().difference(value.time).inHours < 1) {
+    if (DateTime.now().difference(value.time).inHours < 3) {
       return true;
     } else {
       showMessageToUser(context,
@@ -85,6 +85,7 @@ class HomeCubit extends Cubit<HomeState> {
   String currentLocation = '';
 
   void getCurrentLocation() {
+    print(DateTime.now());
     emit(const HomeState.getLocationLoading());
     LocationHelper.getCurrentLocation().then((value) {
       currentLocation = value;

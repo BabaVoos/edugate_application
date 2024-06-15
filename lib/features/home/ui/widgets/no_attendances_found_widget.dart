@@ -10,11 +10,11 @@ class NoAttendancesFoundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Text(
-          'No attendances found',
-          style: TextStyles.font16GreyMedium,
-        ),
-      );
+      padding: EdgeInsets.symmetric(horizontal: 24.w),
+      child: Text(
+        "Looks like you haven't attended any lectures yet :)",
+        style: TextStyles.font16GreyMedium,
+      ),
+    );
   }
 }

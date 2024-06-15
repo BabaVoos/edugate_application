@@ -1,7 +1,7 @@
 class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
   static const String testingBaseUrl =
-      'https://b540-196-129-170-82.ngrok-free.app//api/';
+      'https://a0fb-196-129-178-41.ngrok-free.app/api/';
   static const String login = 'account/login';
   static const String logout = 'account/logout';
   static const String register = 'account/register';
@@ -10,8 +10,9 @@ class ApiConstants {
   static const String getCourses = 'studentCourseGroup/AppStudentCourse';
   static const String getCourseAttendance = 'attendance/studentAttendance';
   static const String getAttendanceHistory = 'Attendance/history';
-  static const String comapreImages =
-      'https://5cfc-197-53-110-146.ngrok-free.app/predict';
+  static const String getImage = "UploadImage/getimage";
+  static const String comapreImages = 'http://192.168.1.109:5000/predict';
+  static const String takeAttendance = "Attendance/takeAttendance";
 }
 
 class ApiErrors {

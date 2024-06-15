@@ -13,7 +13,7 @@ AppBar buildApplicationAppBar({required String title}) {
     leading: title == 'Home'
         ? Container(
             margin: EdgeInsets.only(left: 15.w, bottom: 10.h, top: 10.h),
-            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+            padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
             decoration: const BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
@@ -37,7 +37,7 @@ AppBar buildApplicationAppBar({required String title}) {
             ),
           )
         : Container(),
-    actions: title == 'Home'
+    actions: title == 'Home' || title == 'Help'
         ? [
             SvgPicture.asset(
               'assets/svgs/blue_container.svg',

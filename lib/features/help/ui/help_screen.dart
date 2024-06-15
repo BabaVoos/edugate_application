@@ -13,15 +13,29 @@ class HelpScreen extends StatelessWidget {
           'Edugate is a platform that helps students in thier daily attendances at the university.',
     },
     {
-      'question': 'Face ID not matching?',
+      'question': 'How does the app ensure accurate attendance recording?',
       'answer':
-          'Inform your professor about  the proble mwith the face ID and he will reset the face ID for you.',
+          "Attendance is marked in the app by scanning the QR code, ensuring the student's presence within the designated location and time, verifying their identity through face ID, and then confirming the attendance ",
     },
     {
-      'question':
-          'What happens when a user scans the QR code using the application?',
+      'question': "QR Code Scan Timing",
       'answer':
-          "When a user scans the QR code, the application captures their location and compares it with the location of the doctor who generated the QR code. It also performs face authentication and verifies the user's fingerprint to ensure their identity.",
+          "Scan the QR code within one hour of its generation to mark your attendance accurately."
+    },
+    {
+      'question': "Proximity to Doctor",
+      'answer':
+          "Make sure you are within a 10-meter radius of the doctor when scanning the QR code for attendance",
+    },
+    {
+      'question': "Face ID",
+      'answer':
+          "Take a clear photo during the scan that includes only your face to verify your identity successfully.",
+    },
+    {
+      'question': 'Face ID not matching?',
+      'answer':
+          'Inform your professor about  the problem with the face ID and he will reset the face ID for you.',
     },
     {
       'question':
@@ -41,28 +55,14 @@ class HelpScreen extends StatelessWidget {
       'answer':
           "The application prioritizes user privacy and complies with relevant privacy regulations. Biometric data, such as facial recognition and fingerprints, is securely stored and used only for authentication purposes within the attendance tracking system.",
     },
-    {
-      'question': "Proximity to Doctor",
-      'answer':
-          " Ensure you are within 5 meters of the doctor when scanning the QR code for attendance.",
-    },
-    {
-      'question': "QR Code Scan Timing",
-      'answer':
-          "Scan the QR code within one hour of its generation to mark your attendance accurately."
-    },
-    {
-      'question': "Face ID",
-      'answer':
-          "Take a clear photo during the scan that includes only your face to verify your identity successfully.",
-    }
   ];
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: const BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+      padding:
+          EdgeInsets.only(left: 16.w, right: 16.h, top: 16.h, bottom: 55.h),
       itemCount: questionsAndAnswers.length,
       itemBuilder: (context, index) {
         return QuestionAnswerWidget(

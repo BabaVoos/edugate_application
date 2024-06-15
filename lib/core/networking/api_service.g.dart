@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://b540-196-129-170-82.ngrok-free.app//api/';
+    baseUrl ??= 'https://a0fb-196-129-178-41.ngrok-free.app/api/';
   }
 
   final Dio _dio;
@@ -244,7 +244,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'https://5cfc-197-53-110-146.ngrok-free.app/predict',
+              'http://192.168.1.109:5000/predict',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -254,6 +254,62 @@ class _ApiService implements ApiService {
               baseUrl,
             ))));
     final value = CompareImagesResponseBody.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<GetImageResponse> getImage(String studetId) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'studentId': studetId};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<GetImageResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'UploadImage/getimage',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = GetImageResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<TakeAttendanceResponse> takeAttendance(
+      TakeAttendanceRequestBody takeAttendanceRequestBody) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(takeAttendanceRequestBody.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<TakeAttendanceResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'Attendance/takeAttendance',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = TakeAttendanceResponse.fromJson(_result.data!);
     return value;
   }
 
