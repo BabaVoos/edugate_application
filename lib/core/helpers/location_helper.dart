@@ -70,7 +70,7 @@ class LocationHelper {
           message: 'Please enable your location firstly, then scan again');
     }
 
-    if (distance < 10) {
+    if (distance < 200) {
       return true;
     }
     showMessageToUser(context,
