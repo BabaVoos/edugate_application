@@ -32,13 +32,13 @@ class RegisterScreen extends StatelessWidget {
               verticalSpacing(20),
               const UserDataForm(),
               verticalSpacing(30),
-              AppTitleAndButton(
-                buttonTitle: 'Next',
-                backgroundColor: ColorsManager.blueColor,
-                onTap: () {
-                  validateThenDoRegister(context);
-                },
-              ),
+          AppTitleAndButton(
+            buttonTitle: 'Next',
+            backgroundColor: ColorsManager.blueColor,
+            onTap: () {
+              validateThenDoRegister(context);
+            },
+          ),
               verticalSpacing(30),
               const AlreadyRegisteredText(),
               const RegisterBlocListener(),

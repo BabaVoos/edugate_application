@@ -1,7 +1,7 @@
 class ApiConstants {
   static const String baseUrl = 'http://edugate.somee.com/api/';
   static const String testingBaseUrl =
-      'https://06af-196-129-112-58.ngrok-free.app/api/';
+      'https://a0fb-196-129-178-41.ngrok-free.app/api/';
   static const String login = 'account/login';
   static const String logout = 'account/logout';
   static const String register = 'account/register';
