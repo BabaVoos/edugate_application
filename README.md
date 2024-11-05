@@ -1,5 +1,5 @@
 # EudGate
-![Group 59](https://github.com/BabaVoos/edugate_application/assets/91697196/15c13111-6e82-4d94-9271-ad6f77cee844)
+![Main](https://github.com/user-attachments/assets/ad86988d-2757-4fd8-9c9c-f1b2f5d126b4)
 
 # 🎬 Getting Started 
 The Edugate mobile application is designed to revolutionize the way student attendance is tracked in college. By leveraging modern technology, Edugate provides a seamless and efficient solution for both students and professors. The app ensures accuracy, reduces manual errors, and simplifies the overall attendance process.
@@ -42,19 +42,19 @@ This project follows a customized clean architecture pattern to ensure scalabili
 # 📱 UI 
 - **Authentication** 
 
-![Group 65 (2)](https://github.com/BabaVoos/doctor_reservation_app/assets/91697196/1dc65330-8e43-4073-bcf5-29510e9874f3)
+![Authentication](https://github.com/user-attachments/assets/454609d2-0238-49b4-a978-46bb5c193471)
 
 - **Take Attendance**
 
-![Group 65 (1)](https://github.com/BabaVoos/doctor_reservation_app/assets/91697196/1da75f07-c770-4c11-9426-ff62f808c7cb)
+![Take Attendance](https://github.com/user-attachments/assets/a6fa0580-8446-41a6-b413-1eaaade8ae8a)
 
 - **Track Attendance**
 
-![Group 77 (2)](https://github.com/BabaVoos/doctor_reservation_app/assets/91697196/7aff6c50-0500-43ca-83b4-f67cd0eae0cf)
+![Track Attendance](https://github.com/user-attachments/assets/d9f660c0-8117-43d5-95cb-a079c70c35dd)
 
 - **Profile & Help**
 
-![Group 77 (1)](https://github.com/BabaVoos/doctor_reservation_app/assets/91697196/11784725-0afd-4a44-998a-898bc0f4836a)
+![Profile   Help](https://github.com/user-attachments/assets/62df46b8-cb87-47e9-8eb5-4922d2a3a33e)
 
 
 ## 📃 License
